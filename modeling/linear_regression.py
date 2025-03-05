@@ -1,0 +1,52 @@
+import mlflow
+import mlflow.artifacts
+import mlflow.sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+
+import dvc.api
+import pandas as pd
+
+path = 'pre_processed_1_dvcs/merged_data.csv'
+repo = 'https://github.com/joel-axb/MLOps_test.git'
+version = 'v2' #git commit tag
+
+data_url = dvc.api.get_url(
+    path = path,
+    repo = repo,
+    rev = version
+    )
+
+
+data = pd.read_csv(data_url, sep=",")
+
+# 데이터셋 로드
+X = data.drop(columns = ['Datetime', 'PowerConsumption_Zone1', 'PowerConsumption_Zone2', 'PowerConsumption_Zone3'])
+y = data[['PowerConsumption_Zone3']]
+
+# 데이터를 학습 세트와 테스트 세트로 분할
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+
+# MLflow 실행 시작
+mlflow.start_run()
+
+# 모델 학습
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# 예측 및 메트릭 계산
+predictions = model.predict(X_test)
+mse = mean_squared_error(y_test, predictions)
+
+# 매개변수, 메트릭, 모델 기록
+mlflow.log_param("model_type", "linear_regression")
+mlflow.log_metric("mse", mse)
+
+# # 모델 저장
+# mlflow.sklearn.log_model(model, "model")
+
+# MLflow 실행 종료
+mlflow.end_run()
+

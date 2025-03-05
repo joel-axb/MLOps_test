@@ -1,4 +1,4 @@
 [core]
     remote = dvc-remote
 ['remote "dvc-remote"']
-    url = /tmp/dvc_storage
+    url = /Users/joel/Documents/github/MLOps_test/dvc_storage

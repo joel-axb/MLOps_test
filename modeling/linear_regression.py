@@ -10,13 +10,13 @@ import pandas as pd
 
 import os
 
-import common_functions
+from common_functions import get_best_result
 
 running_in_github = os.getenv("GITHUB_ACTIONS") == "true"
 
 if running_in_github:
 
-    common_functions.get_best_result()
+    get_best_result()
 
 
 

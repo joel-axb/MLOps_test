@@ -10,7 +10,7 @@ import pandas as pd
 
 import os
 
-running_in_github = os.getenv("GITHUB_ACTIONS") == "ture"
+running_in_github = os.getenv("GITHUB_ACTIONS") == "true"
 
 if running_in_github:
     data = pd.read_csv('dvc_storage_S3/files/md5/73/2b44631f0cf1242a668a04d542700a')

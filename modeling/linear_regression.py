@@ -8,18 +8,27 @@ from sklearn.metrics import mean_squared_error
 import dvc.api
 import pandas as pd
 
-path = 'pre_processed_1_dvcs/merged_data.csv'
-repo = 'https://github.com/joel-axb/MLOps_test.git'
-version = 'v2' #git commit tag
+import os
 
-data_url = dvc.api.get_url(
-    path = path,
-    repo = repo,
-    rev = version
-    )
+running_in_github = os.getenv("GITHUB_ACTIONS") == "ture"
+
+if running_in_github:
+    data = pd.read_csv('dvc_storage_S3/files/md5/73/2b44631f0cf1242a668a04d542700a')
+
+else:
+    path = 'pre_processed_1_dvcs/merged_data.csv'
+    repo = 'https://github.com/joel-axb/MLOps_test.git'
+    version = 'v2' #git commit tag
+
+    data_url = dvc.api.get_url(
+        path = path,
+        repo = repo,
+        rev = version
+        )
 
 
-data = pd.read_csv(data_url, sep=",")
+
+    data = pd.read_csv(data_url, sep=",")
 
 test_period = ['2025-07', '2025-07']
 

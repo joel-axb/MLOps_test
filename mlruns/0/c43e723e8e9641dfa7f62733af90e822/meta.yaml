@@ -1,0 +1,15 @@
+artifact_uri: /Users/joel/Documents/github/MLOps_test/mlruns/0/c43e723e8e9641dfa7f62733af90e822/artifacts
+end_time: 1741593480058
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c43e723e8e9641dfa7f62733af90e822
+run_name: colorful-calf-612
+run_uuid: c43e723e8e9641dfa7f62733af90e822
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741593480047
+status: 3
+tags: []
+user_id: joel

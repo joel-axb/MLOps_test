@@ -1,0 +1,15 @@
+artifact_uri: /Users/joel/Documents/github/MLOps_test/mlruns/0/fee35684785f43e5bf706919084c3004/artifacts
+end_time: 1741596311903
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fee35684785f43e5bf706919084c3004
+run_name: sassy-carp-829
+run_uuid: fee35684785f43e5bf706919084c3004
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741596310238
+status: 3
+tags: []
+user_id: joel

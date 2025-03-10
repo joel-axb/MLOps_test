@@ -1,0 +1,15 @@
+artifact_uri: /Users/joel/Documents/github/MLOps_test/mlruns/0/dbaa981974b1475bb5ca71595353f735/artifacts
+end_time: 1741596587837
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dbaa981974b1475bb5ca71595353f735
+run_name: incongruous-bug-532
+run_uuid: dbaa981974b1475bb5ca71595353f735
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741596586200
+status: 3
+tags: []
+user_id: joel

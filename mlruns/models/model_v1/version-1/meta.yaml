@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1741596221457
+current_stage: None
+description: ''
+last_updated_timestamp: 1741596221457
+name: model_v1
+run_id: de259c0547a74d75bedd5c8ff0fb6e94
+run_link: ''
+source: /Users/joel/Documents/github/MLOps_test/mlruns/0/de259c0547a74d75bedd5c8ff0fb6e94/artifacts/model
+status: READY
+status_message: null
+storage_location: /Users/joel/Documents/github/MLOps_test/mlruns/0/de259c0547a74d75bedd5c8ff0fb6e94/artifacts/model
+user_id: null
+version: 1

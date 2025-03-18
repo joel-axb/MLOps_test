@@ -27,7 +27,7 @@ if running_in_github:
 
 
 else:
-    path = 'pre_processed_1_dvcs/merged_data.csv'
+    path = 'data_temp_storage/final_data.csv'
     repo = 'https://github.com/joel-axb/MLOps_test.git'
     version = 'v2' #git commit tag
 

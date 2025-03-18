@@ -9,15 +9,20 @@ import dvc.api
 import pandas as pd
 
 import os
-
 from commons.common_functions import get_best_result
+
+# mlflow.set_tracking_uri(uri="http://15.164.97.14:5000")
+# mlflow.set_experiment("Learning Fashion MNIST Dataset with Resnet")
+
+# export MLFLOW_TRACKING_USERNAME=username
+# export MLFLOW_TRACKING_PASSWORD=password
+
 
 running_in_github = os.getenv("GITHUB_ACTIONS") == "true"
 
 if running_in_github:
 
     get_best_result()
-
 
 
 

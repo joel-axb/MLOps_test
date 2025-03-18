@@ -1,21 +1,33 @@
 import pandas as pd
+from athena_related import *
 
-# 파일 경로 설정
-powers_path = "/Users/joel/Documents/github/MLOps_test/raw_data(Athena)/powers.csv"
-weathers_path = "/Users/joel/Documents/github/MLOps_test/raw_data(Athena)/weathers.csv"
 
-# 데이터 불러오기
-powers_df = pd.read_csv(powers_path)
-weathers_df = pd.read_csv(weathers_path)
+if __name__ == "__main__": 
 
-# Datetime 컬럼을 datetime 형식으로 변환
-powers_df["Datetime"] = pd.to_datetime(powers_df["Datetime"])
-weathers_df["Datetime"] = pd.to_datetime(weathers_df["Datetime"])
+    # Athena에서 쿼리 실행
+    query_execution_id = run_athena_query(QUERY, S3_OUTPUT)
 
-# 시간 기준으로 병합 (inner join)
-merged_df = pd.merge(powers_df, weathers_df, on="Datetime", how="inner")
+    # 쿼리 상태 확인
+    status = get_query_status(query_execution_id)
+    if status != "SUCCEEDED":
+        print(f"쿼리 실행 실패: {status}")
+        exit()
 
-merged_df = merged_df[:-10]
+    # 쿼리 결과 가져오기
+    df = get_query_results(query_execution_id)
 
-# CSV 파일로 저장 (선택사항)
-merged_df.to_csv("/Users/joel/Documents/github/MLOps_test/pre_processed_1_dvcs/merged_data.csv", index=False)
+    # S3에서 즉시 결과 파일 삭제
+    delete_s3_result(query_execution_id)
+
+    # 데이터 확인
+    print("Athena 데이터 가져오기 완료")
+    print(df.head())
+
+    # 전처리를 한다
+    df = df.iloc[:-2]
+
+    # CSV 파일로 저장
+    # csv 파일로 저장이 되는 실파일은 dvc add -> push 를 통해 dvc 파일이 생성 저장?
+    # 이 후 로컬에 저장된 실파일과 cache 파일은 삭제한다.
+    # git push 한다.
+    df.to_csv("/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv", index=False)

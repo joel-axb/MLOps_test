@@ -13,8 +13,6 @@ if not all([MLFLOW_TRACKING_URI, MLFLOW_TRACKING_USERNAME, MLFLOW_TRACKING_PASSW
 
 # ✅ Set MLflow Tracking URI and Pass Credentials
 mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
-os.environ["MLFLOW_TRACKING_USERNAME"] = MLFLOW_TRACKING_USERNAME
-os.environ["MLFLOW_TRACKING_PASSWORD"] = MLFLOW_TRACKING_PASSWORD
 
 
 # ✅ Read Run ID from GitHub Actions ENV

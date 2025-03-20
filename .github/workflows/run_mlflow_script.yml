@@ -22,6 +22,9 @@ jobs:
           pip install -r modeling/requirements.txt
           pip install dvc  # Ensure DVC is installed
 
+      - name: Debug Working Directory
+        run: pwd && ls -R
+
       - name: Load .env Variables
         run: |
           export $(grep -v '^#' .env | xargs) && echo "Loaded environment variables from .env"

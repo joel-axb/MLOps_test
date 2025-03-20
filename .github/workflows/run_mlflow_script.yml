@@ -44,7 +44,7 @@ jobs:
       - name: Fetch Metrics from MLflow
         env:
           EXPERIMENT_ID: $VERSION
-        run: python ./modeling/commons/get_metrics.py
+        run: python modeling/commons/get_metrics.py
 
 
 

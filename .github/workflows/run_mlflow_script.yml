@@ -22,21 +22,5 @@ jobs:
           pip install -r modeling/requirements.txt
           pip install dvc  # Ensure DVC is installed
 
-      - name: Debug Working Directory
-        run: pwd && ls -R
-
-      - name: Load .env Variables
-        run: |
-          export $(grep -v '^#' .env | xargs) && echo "Loaded environment variables from .env"
-
-      - name: Check Loaded Environment Variables
-        run: |
-          echo "AWS_PROFILE is set to $AWS_PROFILE"
-
-      - name: Add and Push Data to DVC
-        run: |
-          dvc add ./data_temp_storage/final_data.csv
-          dvc push
-
       - name: Run MLflow Training Script
         run: python modeling/linear_regression.py

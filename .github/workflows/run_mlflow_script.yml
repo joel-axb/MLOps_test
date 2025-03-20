@@ -17,6 +17,9 @@ jobs:
         with:
           python-version: "3.8"
 
+      - name: Debug File Structure
+        run: ls -R  # 🛠 Check if the file exists
+
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip

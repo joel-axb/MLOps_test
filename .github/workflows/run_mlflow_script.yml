@@ -36,9 +36,9 @@ jobs:
       - name: Extract exp_id from Commit Message
         run: |
           COMMIT_MSG=$(git log -1 --pretty=%B)
-          EXP_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=exp_id=)\d+')
+          EXP_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=exp_id=)[a-zA-Z0-9]+')
           if [ -z "$EXP_ID" ]; then
-            echo "No exp_id found! Exiting."
+            echo "🚨 No exp_id found! Exiting."
             exit 1
           fi
           echo "EXP_ID=$EXP_ID" >> $GITHUB_ENV

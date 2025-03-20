@@ -8,8 +8,7 @@ MLFLOW_TRACKING_USERNAME = os.getenv("MLFLOW_TRACKING_USERNAME")
 MLFLOW_TRACKING_PASSWORD = os.getenv("MLFLOW_TRACKING_PASSWORD")
 
 # ✅ Read experiment ID from GitHub Actions ENV
-experiment_id = os.getenv("EXPERIMENT_ID")
-
+experiment_id = os.getenv("EXP_ID")
 
 if not experiment_id:
     raise ValueError("🚨 EXPERIMENT_ID is not set!")

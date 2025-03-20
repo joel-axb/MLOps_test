@@ -11,6 +11,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Extract Version from Commit Message
+        run: |
+          VERSION=$(git log -1 --pretty=%B | grep -oP '(?<=version=)[^ ]+')
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:

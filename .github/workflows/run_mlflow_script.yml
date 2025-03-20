@@ -17,13 +17,6 @@ jobs:
         with:
           python-version: "3.8"
 
-      - name: Debug File Structure
-        run: ls -R  # 🛠 Check if the file exists
-
-
-      - name: Debug File Structure
-        run: ls -R modeling/commons
-
 
 
       - name: Install Dependencies
@@ -34,33 +27,30 @@ jobs:
           pip install mlflow jq
 
 
-      - name: Extract MLflow Credentials from `env_1`
+      # - name: Extract MLflow Credentials from `env_1`
+      #   run: |
+      #     echo '${{ secrets.MLFLOW_TRACKING_URI }}'
+      #     echo "MLFLOW_TRACKING_URI=${{ secrets.MLFLOW_TRACKING_USERNAME }}"
+      #     echo "MLFLOW_TRACKING_USERNAME=${{ secrets.MLFLOW_TRACKING_PASSWORD }}"
+
+      - name: Extract exp_id from Commit Message
         run: |
-          echo '${{ secrets.MLFLOW_TRACKING_URI }}'
-          echo "MLFLOW_TRACKING_URI=${{ secrets.MLFLOW_TRACKING_USERNAME }}"
-          echo "MLFLOW_TRACKING_USERNAME=${{ secrets.MLFLOW_TRACKING_PASSWORD }}"
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          EXP_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=exp_id=)\d+')
+          if [ -z "$EXP_ID" ]; then
+            echo "No exp_id found! Exiting."
+            exit 1
+          fi
+          echo "EXP_ID=$EXP_ID" >> $GITHUB_ENV
+          echo "🔍 Extracted Experiment ID: $EXP_ID"
 
 
       - name: Change Directory and Run Script
+        env:
+          EXP_ID: ${{ env.EXP_ID }}
         run: |
           cd modeling/commons
           python get_metrics.py
-
-      - name: Fetch Metrics from MLflow
-        env:
-          MLFLOW_TRACKING_URI: ${{ secrets.MLFLOW_TRACKING_URI }}
-          MLFLOW_TRACKING_USERNAME: ${{ secrets.MLFLOW_TRACKING_USERNAME }}
-          MLFLOW_TRACKING_PASSWORD: ${{ secrets.MLFLOW_TRACKING_PASSWORD }}
-        run: python get_metrics.py
-
-
-
-
-      - name: Fetch Metrics from MLflow
-        env:
-          EXPERIMENT_ID: $VERSION
-        run: python modeling/commons/get_metrics.py
-
 
 
 

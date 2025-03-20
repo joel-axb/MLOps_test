@@ -1,34 +1,30 @@
 import mlflow
-import json
 import os
 
-# ✅ MLflow Tracking URI (Modify if necessary)
+# ✅ Load MLflow Credentials from Environment Variables
 MLFLOW_TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI")
 MLFLOW_TRACKING_USERNAME = os.getenv("MLFLOW_TRACKING_USERNAME")
 MLFLOW_TRACKING_PASSWORD = os.getenv("MLFLOW_TRACKING_PASSWORD")
 
-# ✅ Read experiment ID from GitHub Actions ENV
-experiment_id = os.getenv("EXP_ID")
+# ✅ Read Run ID from GitHub Actions ENV
+run_id = os.getenv("RUN_ID")
 
-if not experiment_id:
-    raise ValueError("🚨 EXPERIMENT_ID is not set!")
+if not run_id:
+    raise ValueError("🚨 RUN_ID is not set!")
 
-# ✅ Set tracking URI
+# ✅ Set MLflow Tracking URI
 mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
 
-# ✅ Get latest run in the experiment
+# ✅ Fetch run details by run_id
 client = mlflow.tracking.MlflowClient()
-runs = client.search_runs(experiment_ids=[experiment_id], order_by=["start_time DESC"], max_results=1)
+run = client.get_run(run_id)
 
-if not runs:
-    raise ValueError(f"🚨 No runs found for experiment_id: {experiment_id}")
+if not run:
+    raise ValueError(f"🚨 No run found for run_id: {run_id}")
 
-latest_run = runs[0]
-run_id = latest_run.info.run_id
-
-# ✅ Fetch a specific metric (modify as needed)
+# ✅ Fetch the metric value (modify as needed)
 metric_name = "mape"  # Change this to the metric you need
-metric_value = latest_run.data.metrics.get(metric_name, "N/A")
+metric_value = run.data.metrics.get(metric_name, "N/A")
 
 # ✅ Save metric to a file for GitHub Actions
 with open("metric_value.txt", "w") as f:

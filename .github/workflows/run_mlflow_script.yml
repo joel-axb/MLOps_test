@@ -33,21 +33,21 @@ jobs:
       #     echo "MLFLOW_TRACKING_URI=${{ secrets.MLFLOW_TRACKING_USERNAME }}"
       #     echo "MLFLOW_TRACKING_USERNAME=${{ secrets.MLFLOW_TRACKING_PASSWORD }}"
 
-      - name: Extract exp_id from Commit Message
+      - name: Extract RUN_ID from Commit Message
         run: |
           COMMIT_MSG=$(git log -1 --pretty=%B)
-          EXP_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=exp_id=)[a-zA-Z0-9]+')
-          if [ -z "$EXP_ID" ]; then
-            echo "🚨 No exp_id found! Exiting."
+          RUN_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=RUN_ID=)[a-zA-Z0-9]+')
+          if [ -z "$RUN_ID" ]; then
+            echo "🚨 No RUN_ID found! Exiting."
             exit 1
           fi
-          echo "EXP_ID=$EXP_ID" >> $GITHUB_ENV
-          echo "🔍 Extracted Experiment ID: $EXP_ID"
+          echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
+          echo "🔍 Extracted Experiment ID: $RUN_ID"
 
 
       - name: Change Directory and Run Script
         env:
-          EXP_ID: ${{ env.EXP_ID }}
+          RUN_ID: ${{ env.RUN_ID }}
         run: |
           cd modeling/commons
           python get_metrics.py

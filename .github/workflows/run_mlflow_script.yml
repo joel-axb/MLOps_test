@@ -38,6 +38,7 @@ jobs:
 
 
 
+
       - name: Read Metric and Use in GitHub Actions
         run: |
           METRIC_VALUE=$(cat metric_value.txt)

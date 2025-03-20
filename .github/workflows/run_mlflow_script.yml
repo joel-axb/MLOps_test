@@ -22,14 +22,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r modeling/requirements.txt
           pip install dvc  # Ensure DVC is installed
+          pip install mlflow jq
+          
 
-
-
-      - name: Extract Version from Commit Message
+      - name: Extract MLflow Credentials from `env_1`
         run: |
-          VERSION=$(git log -1 --pretty=%B | grep -oP '(?<=version=)[^ ]+')
-          echo "VERSION=$VERSION"
+          echo '${{ secrets.env_1 }}' > mlflow_secrets.json
+          echo "MLFLOW_TRACKING_URI=$(jq -r '.MLFLOW_TRACKING_URI' mlflow_secrets.json)" >> $GITHUB_ENV
+          echo "MLFLOW_TRACKING_USERNAME=$(jq -r '.MLFLOW_TRACKING_USERNAME' mlflow_secrets.json)" >> $GITHUB_ENV
+          echo "MLFLOW_TRACKING_PASSWORD=$(jq -r '.MLFLOW_TRACKING_PASSWORD' mlflow_secrets.json)" >> $GITHUB_ENV
 
+      - name: Fetch Metrics from MLflow
+        env:
+          MLFLOW_TRACKING_URI: ${{ env.MLFLOW_TRACKING_URI }}
+          MLFLOW_TRACKING_USERNAME: ${{ env.MLFLOW_TRACKING_USERNAME }}
+          MLFLOW_TRACKING_PASSWORD: ${{ env.MLFLOW_TRACKING_PASSWORD }}
+        run: python get_metrics.py
 
       - name: Fetch Metrics from MLflow
         env:

@@ -25,7 +25,12 @@ S3_OUTPUT = f"s3://{S3_BUCKET}/{S3_PREFIX}"  # 최종 S3 저장 경로
 
 
 # 실행할 Athena 쿼리 (쿼리에서 데이터베이스 직접 지정)
-QUERY = "SELECT * FROM analysis_data.integrated_orders LIMIT 10;"
+QUERY = """ SELECT *
+            FROM analysis_data.integrated_orders 
+            WHERE customer_id = 'beautyofjoseon'
+                  AND created_at_ym >= '202503'
+                  AND date(from_unixtime(cast(order_created_at as bigint)/1000)) >= date('2025-03-01')
+            ORDER BY order_created_at asc;"""
 
 def run_athena_query(query, s3_output):
     """Athena에서 쿼리를 실행하고, 실행 ID를 반환"""
@@ -44,17 +49,45 @@ def get_query_status(query_execution_id):
             return status
         time.sleep(2)
 
+
+
+
 def get_s3_result_file(query_execution_id):
     """쿼리 결과 파일의 S3 경로 반환"""
     return f"athena-results/{query_execution_id}.csv"
 
+
+
 def get_query_results(query_execution_id):
-    """쿼리 결과를 가져와 Pandas DataFrame으로 변환"""
-    response = athena_client.get_query_results(QueryExecutionId=query_execution_id)
-    columns = [col["Name"] for col in response["ResultSet"]["ResultSetMetadata"]["ColumnInfo"]]
-    rows = [row["Data"] for row in response["ResultSet"]["Rows"][1:]]  # 첫 번째 행은 헤더이므로 제외
-    data = [[col.get("VarCharValue", None) for col in row] for row in rows]
-    return pd.DataFrame(data, columns=columns)
+    """쿼리 결과를 가져와 Pandas DataFrame으로 변환 (모든 페이지 가져오기)"""
+    columns = []
+    rows = []
+    next_token = None
+
+    while True:
+        # 요청에 따라 첫 번째 호출 또는 페이지네이션 토큰을 사용한 호출
+        if next_token:
+            response = athena_client.get_query_results(QueryExecutionId=query_execution_id, NextToken=next_token)
+        else:
+            response = athena_client.get_query_results(QueryExecutionId=query_execution_id)
+
+        # 컬럼명 추출 (첫 번째 호출에서만 설정)
+        if not columns:
+            columns = [col["Name"] for col in response["ResultSet"]["ResultSetMetadata"]["ColumnInfo"]]
+
+        # 행 데이터 추출
+        for row in response["ResultSet"]["Rows"][1:]:  # 첫 번째 행은 헤더이므로 제외
+            rows.append([col.get("VarCharValue", None) for col in row["Data"]])
+
+        # 다음 페이지 확인
+        next_token = response.get("NextToken")
+
+        if not next_token:
+            break  # 다음 페이지가 없으면 종료
+
+    # DataFrame 변환
+    return pd.DataFrame(rows, columns=columns)
+
 
 
 

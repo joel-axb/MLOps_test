@@ -1,4 +1,5 @@
 [core]
     remote = dvc-remote
 ['remote "dvc-remote"']
-    url = /Users/joel/Documents/github/MLOps_test/dvc_storage_S3
+    url = s3://data-pipeline.prod.acrossb.net/tmp/mlops_test/dvc/
+    

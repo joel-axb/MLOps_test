@@ -23,8 +23,8 @@ if __name__ == "__main__":
     print("Athena 데이터 가져오기 완료")
     print(df.head())
 
-    # 전처리를 한다
-    df = df.iloc[:-7]
+    # # 전처리를 한다
+    # df = df.iloc[:-9]
 
     # CSV 파일로 저장
     # csv 파일로 저장이 되는 실파일은 dvc add -> push 를 통해 dvc 파일이 생성 저장?

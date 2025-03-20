@@ -31,6 +31,10 @@ jobs:
           echo "VERSION=$VERSION"
 
 
+      - name: Debug File Structure
+        run: ls -R
+
+        
       - name: Fetch Metrics from MLflow
         env:
           EXPERIMENT_ID: $VERSION

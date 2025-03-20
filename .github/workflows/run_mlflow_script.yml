@@ -11,10 +11,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Extract Version from Commit Message
-        run: |
-          VERSION=$(git log -1 --pretty=%B | grep -oP '(?<=version=)[^ ]+')
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -26,6 +22,34 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r modeling/requirements.txt
           pip install dvc  # Ensure DVC is installed
+
+
+
+      - name: Extract Version from Commit Message
+        run: |
+          VERSION=$(git log -1 --pretty=%B | grep -oP '(?<=version=)[^ ]+')
+          echo "VERSION=$VERSION"
+
+
+      - name: Fetch Metrics from MLflow
+        env:
+          EXPERIMENT_ID: $VERSION
+        run: python get_metrics.py
+
+
+
+      - name: Read Metric and Use in GitHub Actions
+        run: |
+          METRIC_VALUE=$(cat metric_value.txt)
+          echo "🚀 MLflow Metric Value: $METRIC_VALUE"
+          echo "METRIC_VALUE=$METRIC_VALUE" >> $GITHUB_ENV
+
+
+
+      - name: Use Metric in Another Step
+        run: |
+          echo "The metric retrieved from MLflow is: $METRIC_VALUE"
+
 
       - name: Run MLflow Training Script
         run: python modeling/linear_regression.py

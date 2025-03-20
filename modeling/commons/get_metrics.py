@@ -3,7 +3,9 @@ import json
 import os
 
 # ✅ MLflow Tracking URI (Modify if necessary)
-MLFLOW_TRACKING_URI = "http://15.164.97.14:5000"
+MLFLOW_TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI")
+MLFLOW_TRACKING_USERNAME = os.getenv("MLFLOW_TRACKING_USERNAME")
+MLFLOW_TRACKING_PASSWORD = os.getenv("MLFLOW_TRACKING_PASSWORD")
 
 # ✅ Read experiment ID from GitHub Actions ENV
 experiment_id = os.getenv("EXPERIMENT_ID")

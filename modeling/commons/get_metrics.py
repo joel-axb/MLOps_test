@@ -3,13 +3,20 @@ import os
 
 # ✅ Load MLflow Credentials from Environment Variables
 # MLFLOW_TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI")
+
 MLFLOW_TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI")
 MLFLOW_TRACKING_USERNAME = os.getenv("MLFLOW_TRACKING_USERNAME")
 MLFLOW_TRACKING_PASSWORD = os.getenv("MLFLOW_TRACKING_PASSWORD")
 
-print(type(MLFLOW_TRACKING_URI))
-print(type(MLFLOW_TRACKING_PASSWORD))
-print(MLFLOW_TRACKING_USERNAME)
+if not all([MLFLOW_TRACKING_URI, MLFLOW_TRACKING_USERNAME, MLFLOW_TRACKING_PASSWORD]):
+    raise ValueError("🚨 MLflow credentials are not set properly!")
+
+# ✅ Set MLflow Tracking URI and Pass Credentials
+mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+os.environ["MLFLOW_TRACKING_USERNAME"] = MLFLOW_TRACKING_USERNAME
+os.environ["MLFLOW_TRACKING_PASSWORD"] = MLFLOW_TRACKING_PASSWORD
+
+
 # ✅ Read Run ID from GitHub Actions ENV
 run_id = os.getenv("RUN_ID")
 
@@ -18,7 +25,7 @@ run_id = os.getenv("RUN_ID")
 
 # ✅ Set MLflow Tracking URI
 # mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
-mlflow.set_tracking_uri("http://15.164.97.14:5000")
+# mlflow.set_tracking_uri("http://15.164.97.14:5000")
     
 original_value = os.getenv("AWS_PROFILE")
 # os.environ["AWS_PROFILE"] = "axb-dev-general"

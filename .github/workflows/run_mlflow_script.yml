@@ -32,7 +32,7 @@ jobs:
 
       - name: Add and Push Data to DVC
         run: |
-          dvc add data_temp_storage/final_data.csv
+          dvc add /data_temp_storage/final_data.csv
           dvc push
 
       - name: Run MLflow Training Script

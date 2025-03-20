@@ -25,7 +25,7 @@ run_id = os.getenv("RUN_ID")
 mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
 # mlflow.set_tracking_uri("http://15.164.97.14:5000")
     
-original_value = os.getenv("AWS_PROFILE")
+# original_value = os.getenv("AWS_PROFILE")
 # os.environ["AWS_PROFILE"] = "axb-dev-general"
 
 # ✅ Fetch run details by run_id
@@ -40,10 +40,10 @@ metric_name = "mape"  # Change this to the metric you need
 metric_value = run.data.metrics.get(metric_name, "N/A")
 
 # 환경 변수 원래 값으로 복구
-if original_value is None:
-    del os.environ["AWS_PROFILE"]  # 원래 없던 값이면 삭제
-else:
-    os.environ["AWS_PROFILE"] = original_value  # 원래 값으로 복구
+# if original_value is None:
+#     del os.environ["AWS_PROFILE"]  # 원래 없던 값이면 삭제
+# else:
+#     os.environ["AWS_PROFILE"] = original_value  # 원래 값으로 복구
 
 
 # ✅ Save metric to a file for GitHub Actions

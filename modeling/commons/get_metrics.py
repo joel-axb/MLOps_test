@@ -5,14 +5,14 @@ import os
 # MLFLOW_TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI")
 
 MLFLOW_TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI")
-MLFLOW_TRACKING_USERNAME = os.getenv("MLFLOW_TRACKING_USERNAME")
-MLFLOW_TRACKING_PASSWORD = os.getenv("MLFLOW_TRACKING_PASSWORD")
+# MLFLOW_TRACKING_USERNAME = os.getenv("MLFLOW_TRACKING_USERNAME")
+# MLFLOW_TRACKING_PASSWORD = os.getenv("MLFLOW_TRACKING_PASSWORD")
 
-if not all([MLFLOW_TRACKING_URI, MLFLOW_TRACKING_USERNAME, MLFLOW_TRACKING_PASSWORD]):
-    raise ValueError("🚨 MLflow credentials are not set properly!")
+# if not all([MLFLOW_TRACKING_URI, MLFLOW_TRACKING_USERNAME, MLFLOW_TRACKING_PASSWORD]):
+#     raise ValueError("🚨 MLflow credentials are not set properly!")
 
 # ✅ Set MLflow Tracking URI and Pass Credentials
-mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+# mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
 
 
 # ✅ Read Run ID from GitHub Actions ENV
@@ -22,7 +22,7 @@ run_id = os.getenv("RUN_ID")
 #     raise ValueError("🚨 RUN_ID is not set!")
 
 # ✅ Set MLflow Tracking URI
-# mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
 # mlflow.set_tracking_uri("http://15.164.97.14:5000")
     
 original_value = os.getenv("AWS_PROFILE")

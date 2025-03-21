@@ -105,9 +105,6 @@ print(f"✅ Fetched metric: {metric_name} = {current_metric_value} for run_id: {
 
 
 
-new_metric = 0.87
-old_metric = 0.90
-
 # Print in KEY=VALUE format for GitHub Actions to parse
-print(f"NEW_METRIC={new_metric}")
-print(f"OLD_METRIC={old_metric}")
+print(f"NEW_METRIC={new_metric_value}")
+print(f"OLD_METRIC={current_metric_value}")

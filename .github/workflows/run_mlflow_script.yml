@@ -103,32 +103,32 @@ jobs:
           fi
 
 
-      # - name: Slack notify on metric degradation
-      #   if: env.metric_check == 'failure'
-      #   uses: rtCamp/action-slack-notify@v2
-      #   env:
-      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_NOTI_PROD }}
-      #     SLACK_COLOR: "#FF0000"
-      #     SLACK_TITLE: "⚠️ Model Performance Degraded at ${{ inputs.env }}"
-      #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one ${{ env.OLD_METRIC }}. Check model performance. :warning:"
+      - name: Slack notify on metric degradation
+        if: env.metric_check == 'failure'
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+          SLACK_COLOR: "#FF0000"
+          SLACK_TITLE: "⚠️ Model Performance Degraded at ${{ inputs.env }}"
+          SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one ${{ env.OLD_METRIC }}. Check model performance. :warning:"
 
 
-      # - name: Slack notify on metric improvement
-      #   if: env.metric_check == 'success'
-      #   uses: rtCamp/action-slack-notify@v2
-      #   env:
-      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_NOTI_PROD }}
-      #     SLACK_COLOR: "#36A64F"
-      #     SLACK_TITLE: "✅ Model Performance Improved at ${{ inputs.env }}"
-      #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
+      - name: Slack notify on metric improvement
+        if: env.metric_check == 'success'
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+          SLACK_COLOR: "#36A64F"
+          SLACK_TITLE: "✅ Model Performance Improved at ${{ inputs.env }}"
+          SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
 
 
 
-      - name: Read Metric and Use in GitHub Actions
-        run: |
-          METRIC_VALUE=$(cat metric_value.txt)
-          echo "🚀 MLflow Metric Value: $METRIC_VALUE"
-          echo "METRIC_VALUE=$METRIC_VALUE" >> $GITHUB_ENV
+      # - name: Read Metric and Use in GitHub Actions
+      #   run: |
+      #     METRIC_VALUE=$(cat metric_value.txt)
+      #     echo "🚀 MLflow Metric Value: $METRIC_VALUE"
+      #     echo "METRIC_VALUE=$METRIC_VALUE" >> $GITHUB_ENV
 
 
 

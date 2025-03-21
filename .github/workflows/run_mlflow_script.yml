@@ -85,7 +85,6 @@ jobs:
           echo "OLD_METRIC=$old_metric" >> $GITHUB_ENV
 
 
-
       - name: Compare new vs old metrics
         run: |
           echo "Comparing NEW_METRIC=${{ env.NEW_METRIC }} vs OLD_METRIC=${{ env.OLD_METRIC }}"

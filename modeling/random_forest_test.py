@@ -35,8 +35,6 @@ class CustomModelWrapper(mlflow.pyfunc.PythonModel):
 
 def create_experiment():
     client = mlflow.MlflowClient(
-        tracking_uri="http://15.164.97.14:5000",
-        # registry_uri=""
     )
     
     print(client.search_experiments())
@@ -88,7 +86,7 @@ if __name__ == "__main__":
     create_experiment()
 
     # Use the fluent API to set the tracking uri and the active experiment
-    mlflow.set_tracking_uri("http://15.164.97.14:5000")
+    # mlflow.set_tracking_uri("http://15.164.97.14:5000")
 
     # Sets the current active experiment to the "Apple_Models" experiment and returns the Experiment metadata
     mlflow.set_experiment("beauty_of_joseon_prophet_3")

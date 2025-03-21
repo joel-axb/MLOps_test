@@ -8,10 +8,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # AWS_PROFILE 설정 (환경 변수에서 가져오기)
-AWS_PROFILE = os.getenv("AWS_PROFILE", "default")  # 기본값 "default"
+# AWS_PROFILE = os.getenv("AWS_PROFILE")  # 기본값 "default"
 
 # AWS 세션 설정 (Assume Role 자동 처리됨)
-session = boto3.Session(profile_name=AWS_PROFILE)
+session = boto3.Session()
 
 # Athena & S3 클라이언트 생성
 athena_client = session.client("athena")
@@ -27,7 +27,7 @@ S3_OUTPUT = f"s3://{S3_BUCKET}/{S3_PREFIX}"  # 최종 S3 저장 경로
 # 실행할 Athena 쿼리 (쿼리에서 데이터베이스 직접 지정)
 QUERY = """ SELECT *
             FROM analysis_data.integrated_orders 
-            LIMIT 1;"""
+            LIMIT 2000;"""
 
 def run_athena_query(query, s3_output):
     """Athena에서 쿼리를 실행하고, 실행 ID를 반환"""

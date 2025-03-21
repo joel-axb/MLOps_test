@@ -2,3 +2,4 @@ mlflow
 dvc
 pandas
 scikit-learn
+dotenv

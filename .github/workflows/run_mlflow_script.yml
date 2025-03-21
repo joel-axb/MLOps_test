@@ -39,7 +39,7 @@ jobs:
           COMMIT_MSG=$(git log -1 --pretty=%B)
           
           CUSTOMER_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=CUSTOMER_ID=)[a-zA-Z0-9]+')
-          SKU=$(echo "$COMMIT_MSG" | grep -oP '(?<=SKU=)[a-zA-Z0-9]+') 
+          SKU=$(echo "$COMMIT_MSG" | grep -oP '(?<=SKU=)[\w-]+')
           RUN_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=RUN_ID=)[a-zA-Z0-9]+')
 
           if [ -z "$CUSTOMER_ID" ]; then

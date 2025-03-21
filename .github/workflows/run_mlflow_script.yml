@@ -95,7 +95,8 @@ jobs:
             echo "metric_check=success" >> $GITHUB_ENV
           fi
 
-
+      # for sending slack messages
+      
       # - name: Slack notify on metric degradation
       #   if: env.metric_check == 'failure'
       #   uses: rtCamp/action-slack-notify@v2

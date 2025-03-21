@@ -9,14 +9,23 @@ jobs:
 
     steps:
 
-      - name: Skip merge commits
-        if: contains(github.event.head_commit.message, 'Merge pull request')
-        run: |
-          echo "🛑 Merge commit detected. Skipping workflow steps."
-          exit 0
 
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Detect and skip merge commits
+        run: |
+          echo "Checking for merge commit..."
+          MERGE_COMMIT=$(git rev-parse HEAD)
+          NUM_PARENTS=$(git rev-list --parents -n 1 $MERGE_COMMIT | wc -w)
+
+          if [ "$NUM_PARENTS" -gt 2 ]; then
+            echo "🛑 This is a merge commit. Skipping workflow."
+            exit 0
+          else
+            echo "✅ Not a merge commit. Continuing..."
+          fi
+
 
 
       - name: Set up Python    

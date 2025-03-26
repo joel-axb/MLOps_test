@@ -2,6 +2,8 @@ name: Auto-Run ML Model on Push
 
 on:
   push:
+      branches-ignore:  # ⛔ main 브랜치는 무시함
+      - main
 
 jobs:
   run_ml_model:
@@ -97,7 +99,7 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
           SLACK_COLOR: "#FF0000"
           SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ⚠️ Model Performance Degraded or Same"
-          SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one ${{ env.OLD_METRIC }}. Check model performance. :warning:"
+          SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one or same as before ${{ env.OLD_METRIC }}. Check model performance. :warning:"
 
 
       - name: Slack notify on metric improvement

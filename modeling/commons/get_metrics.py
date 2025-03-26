@@ -36,7 +36,7 @@ customer_id = f"'{customer_id}'"
 sku = f"'{sku}'"
 
 # filter_str = f"description LIKE '%CUSTOMER_ID={customer_id}%' AND description LIKE '%SKU_ID={sku}%'"
-filter_str = f"name='test_1' and tag.customer_id={customer_id} and tag.sku={sku}"
+filter_str = f"name={customer_id}+_+{sku}} and tag.customer_id={customer_id} and tag.sku={sku}"
 results = client.search_registered_models(filter_string=filter_str)
 
 if results:

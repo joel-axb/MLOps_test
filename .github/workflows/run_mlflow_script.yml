@@ -96,7 +96,7 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
           SLACK_COLOR: "#FF0000"
-          SLACK_TITLE: "[env.CUSTOMER_ID, env.SKU] ⚠️ Model Performance Degraded or Same"
+          SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ⚠️ Model Performance Degraded or Same"
           SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one ${{ env.OLD_METRIC }}. Check model performance. :warning:"
 
 
@@ -106,5 +106,5 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
           SLACK_COLOR: "#36A64F"
-          SLACK_TITLE: "[env.CUSTOMER_ID, env.SKU] ✅ Model Performance Improved"
+          SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ✅ Model Performance Improved"
           SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"

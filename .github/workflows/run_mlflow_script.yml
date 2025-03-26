@@ -9,31 +9,13 @@ jobs:
 
     steps:
 
-
       - name: Checkout Repository
         uses: actions/checkout@v4
-
-      - name: Detect and skip merge commits
-        run: |
-          echo "Checking for merge commit..."
-          MERGE_COMMIT=$(git rev-parse HEAD)
-          NUM_PARENTS=$(git rev-list --parents -n 1 $MERGE_COMMIT | wc -w)
-
-          if [ "$NUM_PARENTS" -gt 2 ]; then
-            echo "🛑 This is a merge commit. Skipping workflow."
-            exit 0
-          else
-            echo "✅ Not a merge commit. Continuing..."
-          fi
-
-
 
       - name: Set up Python    
         uses: actions/setup-python@v4
         with:
           python-version: "3.8"
-
-
 
       - name: Install Dependencies
         run: |
@@ -42,13 +24,11 @@ jobs:
           pip install dvc  # Ensure DVC is installed
           pip install mlflow jq
 
-
       - name: Extract MLflow Credentials from `env_1`
         run: |
           echo "MLFLOW_TRACKING_URI=${{ secrets.MLFLOW_TRACKING_URI }}" >> $GITHUB_ENV
           echo "MLFLOW_TRACKING_USERNAME=${{ secrets.MLFLOW_TRACKING_USERNAME }}" >> $GITHUB_ENV
           echo "MLFLOW_TRACKING_PASSWORD=${{ secrets.MLFLOW_TRACKING_PASSWORD }}" >> $GITHUB_ENV
-
 
       - name: Extract CUSTOMER_ID, SKU, RUN_ID from Commit Message
         run: |
@@ -78,8 +58,6 @@ jobs:
           fi
           echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
           echo "🔍 Extracted RUN_ID: $RUN_ID"
-
-
 
       - name: Fetch new and old metrics
         env:
@@ -111,23 +89,22 @@ jobs:
             echo "metric_check=success" >> $GITHUB_ENV
           fi
 
-      # for sending slack messages
       
-      # - name: Slack notify on metric degradation
-      #   if: env.metric_check == 'failure'
-      #   uses: rtCamp/action-slack-notify@v2
-      #   env:
-      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
-      #     SLACK_COLOR: "#FF0000"
-      #     SLACK_TITLE: "⚠️ Model Performance Degraded at ${{ inputs.env }}"
-      #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one ${{ env.OLD_METRIC }}. Check model performance. :warning:"
+      - name: Slack notify on metric degradation
+        if: env.metric_check == 'failure'
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+          SLACK_COLOR: "#FF0000"
+          SLACK_TITLE: "⚠️ Model Performance Degraded at ${{ inputs.env }}"
+          SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one ${{ env.OLD_METRIC }}. Check model performance. :warning:"
 
 
-      # - name: Slack notify on metric improvement
-      #   if: env.metric_check == 'success'
-      #   uses: rtCamp/action-slack-notify@v2
-      #   env:
-      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
-      #     SLACK_COLOR: "#36A64F"
-      #     SLACK_TITLE: "✅ Model Performance Improved at ${{ inputs.env }}"
-      #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
+      - name: Slack notify on metric improvement
+        if: env.metric_check == 'success'
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+          SLACK_COLOR: "#36A64F"
+          SLACK_TITLE: "✅ Model Performance Improved at ${{ inputs.env }}"
+          SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"

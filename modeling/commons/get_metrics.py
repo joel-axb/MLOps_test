@@ -35,7 +35,7 @@ print(f"✅ Fetched metric: {new_metric_name} = {new_metric_value} for run_id: {
 customer_id = f"'{customer_id}'"
 sku = f"'{sku}'"
 
-filter_str = f"description LIKE '%CUSTOMER_ID={customer_id}%' AND description LIKE '%SKU_ID={sku}%'"
+# filter_str = f"description LIKE '%CUSTOMER_ID={customer_id}%' AND description LIKE '%SKU_ID={sku}%'"
 filter_str = f"name='test_1' and tag.customer_id={customer_id} and tag.sku={sku}"
 results = client.search_registered_models(filter_string=filter_str)
 

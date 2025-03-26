@@ -1,4 +1,5 @@
 import boto3.session
+from mlflow.data import Dataset as MlflowDataset
 import mlflow
 import mlflow.artifacts
 import mlflow.sklearn
@@ -8,6 +9,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 from sklearn.ensemble import RandomForestRegressor
 import sys
+import dvc.api
+import yaml
+from mlflow.data.pandas_dataset import PandasDataset
 
 from prophet import Prophet
 import numpy as np
@@ -126,6 +130,7 @@ if __name__ == "__main__":
 
     mse = mean_squared_error(y_val, y_pred)
 
+    # dataset_url = dvc.api.get_url('/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv')
 
     print(mlflow.get_artifact_uri())
     # ✅ Log Parameters, Metrics, and Model to MLflow
@@ -147,8 +152,36 @@ if __name__ == "__main__":
     with open(model_path, "wb") as f:
         pickle.dump(model, f)
 
+
+    with open("/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv.dvc", "r") as file:
+    # Load DVC lock file (YAML)
+        dvc_data = yaml.safe_load(file)  # ✅ Use yaml.safe_load() instead of json.load()
+
+    # Extract dataset info
+    dataset_info = dvc_data["outs"][0]  # Get the first dataset entry
+    dataset_md5 = dataset_info["md5"]
+    dataset_path = dataset_info["path"]
+
+    print(f"Dataset Path: {dataset_path}")
+    print(f"MD5 Hash: {dataset_md5}")
+
+
+    folder_name = dataset_md5[:2]
+    file_name = dataset_md5[2:]
     # Log the temporary file as an artifact
     mlflow.pyfunc.log_model("prophet_model", python_model=CustomModelWrapper(model))
+
+
+    dataset_url = 's3://data-pipeline.prod.acrossb.net/tmp/mlops_test/dvc/files/md5/' + folder_name + '/' + file_name 
+    dataset = PandasDataset(data, source=dataset_url)
+
+    dataset = mlflow.data.from_pandas(
+    data, source=dataset_url
+)
+    mlflow.log_input(dataset, context="training")
+    mlflow.log_param("dataset_md5", "b1227b9cd58931300e31bbc3c640f0")
+
+    # mlflow.log_input(mlflow.data.Dataset(source=dataset_url))
 
     mlflow.log_artifact(model_path)
     # Log script as an artifact

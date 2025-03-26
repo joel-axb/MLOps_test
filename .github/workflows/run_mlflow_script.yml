@@ -84,9 +84,9 @@ jobs:
           echo "Comparing NEW_METRIC=${{ env.NEW_METRIC }} vs OLD_METRIC=${{ env.OLD_METRIC }}"
 
           if (( $(echo "${{ env.NEW_METRIC }} < ${{ env.OLD_METRIC }}" | bc -l) )); then
-            echo "metric_check=failure" >> $GITHUB_ENV
-          else
             echo "metric_check=success" >> $GITHUB_ENV
+          else
+            echo "metric_check=failure" >> $GITHUB_ENV
           fi
 
       
@@ -96,7 +96,7 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
           SLACK_COLOR: "#FF0000"
-          SLACK_TITLE: "⚠️ Model Performance Degraded at ${{ inputs.env }}"
+          SLACK_TITLE: "[env.CUSTOMER_ID, env.SKU] ⚠️ Model Performance Degraded or Same"
           SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one ${{ env.OLD_METRIC }}. Check model performance. :warning:"
 
 
@@ -106,5 +106,5 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
           SLACK_COLOR: "#36A64F"
-          SLACK_TITLE: "✅ Model Performance Improved at ${{ inputs.env }}"
+          SLACK_TITLE: "[env.CUSTOMER_ID, env.SKU] ✅ Model Performance Improved"
           SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"

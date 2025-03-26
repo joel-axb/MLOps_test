@@ -93,7 +93,7 @@ if __name__ == "__main__":
     # mlflow.set_tracking_uri("http://15.164.97.14:5000")
 
     # Sets the current active experiment to the "Apple_Models" experiment and returns the Experiment metadata
-    mlflow.set_experiment("beauty_of_joseon_prophet_3")
+    mlflow.set_experiment("tirtir_sku_002_random_forest")
 
     # Define a run name for this iteration of training.
     # If this is not set, a unique name will be auto-generated for your run.
@@ -104,14 +104,25 @@ if __name__ == "__main__":
 
 
     # ✅ Load the dataset
-    data = pd.read_csv('/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv')
+    try:
+        data = pd.read_csv('/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv')
+        
+    except:
+        print("you alrady deleted the data in local!")
+        print("I will get the most recent data you did dvc push")
+        with dvc.api.open(
+            path="../data_temp_storage/final_data.csv",
+            repo=".",         # current repo
+            rev=None          # ← None = workspace (latest even if uncommitted)
+        ) as fd:
+            data = pd.read_csv(fd)
+
     data["order_created_at"] = pd.to_datetime(data["order_created_at"], unit="ms")
 
     # ✅ Filter for customer_id = 'beautyofjoseon'
-    data_beauty = data[data["customer_id"] == "beautyofjoseon"]
 
     # ✅ Aggregate order count per day
-    data_daily = data_beauty.groupby(data_beauty["order_created_at"].dt.date).size().reset_index(name="order_count")
+    data_daily = data.groupby(data["order_created_at"].dt.date).size().reset_index(name="order_count")
 
     X = data_daily.drop(columns=["order_created_at"])
     y = data_daily['order_count']

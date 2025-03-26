@@ -28,7 +28,7 @@ S3_OUTPUT = f"s3://{S3_BUCKET}/{S3_PREFIX}"  # 최종 S3 저장 경로
 QUERY = """ SELECT *
             FROM analysis_data.integrated_orders 
             where customer_id = 'tirtir'
-            LIMIT 2000;"""
+            LIMIT 2500;"""
 
 def run_athena_query(query, s3_output):
     """Athena에서 쿼리를 실행하고, 실행 ID를 반환"""

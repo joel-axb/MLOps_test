@@ -121,7 +121,8 @@ jobs:
       #     SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ✅ Model Performance Improved"
       #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
 
-
+ 
+ 
       - name: Slack notify on first model registration
         if: env.IS_FIRST_MODEL == 'true'
         uses: rtCamp/action-slack-notify@v2

@@ -77,9 +77,11 @@ jobs:
           # Read the metrics from the output file
           new_metric=$(cat metrics_output.txt | grep "NEW_METRIC" | cut -d '=' -f2)
           old_metric=$(cat metrics_output.txt | grep "OLD_METRIC" | cut -d '=' -f2)
+          is_first_model=$(grep "IS_FIRST_MODEL" metrics_output.txt | cut -d '=' -f2)
 
           echo "NEW_METRIC=$new_metric" >> $GITHUB_ENV
           echo "OLD_METRIC=$old_metric" >> $GITHUB_ENV
+          echo "IS_FIRST_MODEL=$is_first_model" >> $GITHUB_ENV
 
 
       - name: Compare new vs old metrics
@@ -122,7 +124,7 @@ jobs:
       #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
 
  
- 
+
       - name: Slack notify on first model registration
         if: env.IS_FIRST_MODEL == 'true'
         uses: rtCamp/action-slack-notify@v2

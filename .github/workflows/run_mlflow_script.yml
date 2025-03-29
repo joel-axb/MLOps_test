@@ -13,8 +13,6 @@ jobs:
 
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Set up Python    
         uses: actions/setup-python@v4
@@ -37,33 +35,25 @@ jobs:
       - name: Extract CUSTOMER_ID, SKU, RUN_ID from Commit Message
         run: |
           COMMIT_MSG=$(git log -1 --pretty=%B)
+          echo "📝 Commit Message: $COMMIT_MSG"
           
           CUSTOMER_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=CUSTOMER_ID=)[a-zA-Z0-9]+')
           SKU=$(echo "$COMMIT_MSG" | grep -oP '(?<=SKU=)[\w-]+')
           RUN_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=RUN_ID=)[a-zA-Z0-9]+')
 
-          if [ -z "$CUSTOMER_ID" ]; then
-            echo "⚠️ Warning: No CUSTOMER_ID found! Exiting"
+          if [ -z "$CUSTOMER_ID" ] || [ -z "$SKU" ] || [ -z "$RUN_ID" ]; then
+            echo "🚫 필수 파라미터 누락! CUSTOMER_ID, SKU, RUN_ID 중 하나라도 없으면 워크플로우 중단"
+            echo "CUSTOMER_ID=$CUSTOMER_ID"
+            echo "SKU=$SKU"
+            echo "RUN_ID=$RUN_ID"
             exit 1
-          else
-            echo "CUSTOMER_ID=$CUSTOMER_ID" >> $GITHUB_ENV
-            echo "✅ Extracted CUSTOMER_ID: $CUSTOMER_ID"
           fi
 
-          if [ -z "$SKU" ]; then
-            echo "⚠️ Warning: No SKU found! Exiting"
-            exit 1
-          else
-            echo "SKU=$SKU" >> $GITHUB_ENV
-            echo "✅ Extracted SKU: $SKU"
-          fi
+          echo "✅ Extracted CUSTOMER_ID=$CUSTOMER_ID, SKU=$SKU, RUN_ID=$RUN_ID"
 
-          if [ -z "$RUN_ID" ]; then
-            echo "🚨 No RUN_ID found! Exiting."
-            exit 1
-          fi
+          echo "CUSTOMER_ID=$CUSTOMER_ID" >> $GITHUB_ENV
+          echo "SKU=$SKU" >> $GITHUB_ENV
           echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
-          echo "🔍 Extracted RUN_ID: $RUN_ID"
 
       - name: Fetch new and old metrics
         env:

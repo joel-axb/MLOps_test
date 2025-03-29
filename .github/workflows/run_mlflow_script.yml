@@ -41,14 +41,16 @@ jobs:
           RUN_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=RUN_ID=)[a-zA-Z0-9]+')
 
           if [ -z "$CUSTOMER_ID" ]; then
-            echo "⚠️ Warning: No CUSTOMER_ID found!"
+            echo "⚠️ Warning: No CUSTOMER_ID found! Exiting"
+            exit 1
           else
             echo "CUSTOMER_ID=$CUSTOMER_ID" >> $GITHUB_ENV
             echo "✅ Extracted CUSTOMER_ID: $CUSTOMER_ID"
           fi
 
           if [ -z "$SKU" ]; then
-            echo "⚠️ Warning: No SKU found!"
+            echo "⚠️ Warning: No SKU found! Exiting"
+            exit 1
           else
             echo "SKU=$SKU" >> $GITHUB_ENV
             echo "✅ Extracted SKU: $SKU"
@@ -87,26 +89,30 @@ jobs:
 
           if (( $(echo "${{ env.NEW_METRIC }} < ${{ env.OLD_METRIC }}" | bc -l) )); then
             echo "metric_check=success" >> $GITHUB_ENV
+            echo "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ✅ Model Performance Improved"
+            echo: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
           else
             echo "metric_check=failure" >> $GITHUB_ENV
+            echo "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ⚠️ Model Performance Degraded or Same"
+            echo "New metric ${{ env.NEW_METRIC }} is worse than old one or same as before ${{ env.OLD_METRIC }}. Check model performance. :warning:"
           fi
 
       
-      - name: Slack notify on metric degradation
-        if: env.metric_check == 'failure'
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
-          SLACK_COLOR: "#FF0000"
-          SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ⚠️ Model Performance Degraded or Same"
-          SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one or same as before ${{ env.OLD_METRIC }}. Check model performance. :warning:"
+      # - name: Slack notify on metric degradation
+      #   if: env.metric_check == 'failure'
+      #   uses: rtCamp/action-slack-notify@v2
+      #   env:
+      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+      #     SLACK_COLOR: "#FF0000"
+      #     SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ⚠️ Model Performance Degraded or Same"
+      #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one or same as before ${{ env.OLD_METRIC }}. Check model performance. :warning:"
 
 
-      - name: Slack notify on metric improvement
-        if: env.metric_check == 'success'
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
-          SLACK_COLOR: "#36A64F"
-          SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ✅ Model Performance Improved"
-          SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
+      # - name: Slack notify on metric improvement
+      #   if: env.metric_check == 'success'
+      #   uses: rtCamp/action-slack-notify@v2
+      #   env:
+      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+      #     SLACK_COLOR: "#36A64F"
+      #     SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ✅ Model Performance Improved"
+      #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"

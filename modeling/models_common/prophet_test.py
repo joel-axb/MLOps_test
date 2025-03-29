@@ -17,11 +17,6 @@ import os
 from commons.common_functions import get_best_result
 import tempfile, pickle
 
-# mlflow.set_tracking_uri(uri="http://15.164.97.14:5000")
-# mlflow.set_experiment("Learning Fashion MNIST Dataset with Resnet")
-
-# export MLFLOW_TRACKING_USERNAME=username
-# export MLFLOW_TRACKING_PASSWORD=password
 
 def create_experiment():
     client = mlflow.MlflowClient(
@@ -47,33 +42,8 @@ def create_experiment():
 
 
 
-if __name__ == "__main__":
-
-    # --- 이제부터 dev 에 띄어져있는 mlflow를 쓰기 때문에 환경변수를 dev로 임의 설정해준다
-
-    # running_in_github = os.getenv("GITHUB_ACTIONS") == "true"
-
-    # if running_in_github:
-
-    #     get_best_result()
-
-
-
-    # else:
-    #     path = 'data_temp_storage/final_data.csv'
-    #     repo = 'https://github.com/joel-axb/MLOps_test.git'
-    #     version = 'sp-data-001' #git commit tag
-
-    #     data_url = dvc.api.get_url(
-    #         path = path,
-    #         repo = repo,
-    #         rev = version
-    #         )
-
-
-
-
-    #     data = pd.read_csv(data_url, sep=",")
+# if __name__ == "__main__":
+def run_prophet():
 
     create_experiment()
 
@@ -82,13 +52,6 @@ if __name__ == "__main__":
 
     # Sets the current active experiment to the "Apple_Models" experiment and returns the Experiment metadata
     apple_experiment = mlflow.set_experiment("beauty_of_joseon_prophet2")
-
-    # Define a run name for this iteration of training.
-    # If this is not set, a unique name will be auto-generated for your run.
-    # run_name = "apples_rf_test"
-
-    # Define an artifact path that the model will be saved to.
-    # artifact_path = "s3://data-pipeline.dev.acrossb.net/tmp/"
 
 
     # ✅ Load the dataset
@@ -110,8 +73,6 @@ if __name__ == "__main__":
     train_df = data_daily.iloc[:-test_days]  # Train on all except last 5 days
     test_df = data_daily.iloc[-test_days:]   # Test on last 5 days
 
-    # ✅ Set MLflow tracking URI
-    # mlflow.set_tracking_uri("/Users/joel/Documents/github/MLOps_test/mlruns")
 
     # ✅ Start MLflow run
     mlflow.start_run()
@@ -135,8 +96,6 @@ if __name__ == "__main__":
     mlflow.log_metric("mape", mape)
 
 
-
-
     original_value = os.getenv("AWS_PROFILE")
     os.environ["AWS_PROFILE"] = "axb-dev-general"
 
@@ -155,16 +114,6 @@ if __name__ == "__main__":
     mlflow.log_artifact(model_path)
     # Log script as an artifact
     mlflow.log_artifact(sys.argv[0])
-
-
-
-    # 환경 변수 원래 값으로 복구
-    # if original_value is None:
-    #     del os.environ["AWS_PROFILE"]  # 원래 없던 값이면 삭제
-    # else:
-    #     os.environ["AWS_PROFILE"] = original_value  # 원래 값으로 복구
-
-
 
     # ✅ End MLflow Run
     mlflow.end_run()

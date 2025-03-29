@@ -19,6 +19,9 @@ client = mlflow.tracking.MlflowClient()
 
 
 run = client.get_run(run_id=run_id)
+# experiment_id = run.info.experiment_id
+
+
 
 if not run:
     raise ValueError(f"🚨 No run found for run_id: {run_id}")
@@ -46,7 +49,25 @@ if results:
     print(f"Latest version: {latest_version.version}, Run ID: {latest_version.run_id}")
 else:
     print("❌ No matching model found in the registry.")
+    print("📦 No model found — registering new model.")
 
+    model_name = f"{customer_id}_{sku}"
+
+    # Register the current model (assumes artifact path is "model")
+    model_uri = f"runs:/{run_id}/model"
+    mlflow.register_model(model_uri=model_uri, name=model_name)
+
+    # Add tags to the registered model
+    client.set_registered_model_tag(name=model_name, key="customer_id", value=customer_id)
+    client.set_registered_model_tag(name=model_name, key="sku", value=sku)
+
+    # Output flags and metrics for GitHub Actions
+    print("IS_FIRST_MODEL=true")
+    print(f"NEW_METRIC={new_metric_value}")
+    print(f"OLD_METRIC=NA")
+
+    # Exit early — no model to compare against
+    exit(0)
 
 
 

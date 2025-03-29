@@ -101,6 +101,7 @@ jobs:
           fi
 
       
+
       # - name: Slack notify on metric degradation
       #   if: env.metric_check == 'failure'
       #   uses: rtCamp/action-slack-notify@v2
@@ -119,3 +120,13 @@ jobs:
       #     SLACK_COLOR: "#36A64F"
       #     SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ✅ Model Performance Improved"
       #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
+
+
+    - name: Slack notify on first model registration
+      if: env.IS_FIRST_MODEL == 'true'
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+        SLACK_COLOR: "#439FE0"
+        SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] 📦 First Model Registered"
+        SLACK_MESSAGE: "No previous model found. This run is registered as the first version for ${{ env.CUSTOMER_ID }} & ${{ env.SKU }}."

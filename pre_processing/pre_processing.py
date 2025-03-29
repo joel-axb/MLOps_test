@@ -14,10 +14,16 @@ if __name__ == "__main__":
     
     df = orders
 
+    df['order_date'] = pd.to_datetime(df['order_date'])
 
+    # Extract components
+    df['year'] = df['order_date'].dt.year
+    df['month'] = df['order_date'].dt.month
+    df['week'] = df['order_date'].dt.isocalendar().week
+    df['day'] = df['order_date'].dt.day
+    df['weekday'] = df['order_date'].dt.weekday  # e.g., Monday
 
-
-
+    df = df.drop(columns=['order_date'])
     # --------------------------
 
     # save final dataset

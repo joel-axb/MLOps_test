@@ -1,6 +1,6 @@
 customer_id: tirtir
-sku: sku002
+sku: 01TTF0388
 store_id: shopify
 custom_module_path: modeling/custom_models/tirtir__sku002.py
-customed: 1
-model_type: linear_regression
+customed: 0
+model_type: random_forest

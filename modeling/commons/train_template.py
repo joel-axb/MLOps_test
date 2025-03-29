@@ -28,18 +28,19 @@ model_type = config["model_type"]
 
 # set experiment_name
 exp_name = f'{customer}_{store_id}_{sku}_{model_type}'
+print(f"exp_name is: {exp_name}")
 
 # get newly pre-processed data or dvc pushed data
 data = read_final_dataset(config)
 
 # --- 이 부분 간소화 ----
-data["order_created_at"] = pd.to_datetime(data["order_created_at"], unit="ms")
-data_daily = data.groupby(data["order_created_at"].dt.date).size().reset_index(name="order_count")
+# data["order_created_at"] = pd.to_datetime(data["order_created_at"], unit="ms")
+# data_daily = data.groupby(data["order_created_at"].dt.date).size().reset_index(name="order_count")
 # ---------------------
 
 # get train and test set
-X = data_daily.drop(columns=["order_created_at"])
-y = data_daily['order_count']
+X = data.drop(columns=["count"])
+y = data['count']
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
 

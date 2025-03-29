@@ -10,15 +10,12 @@ from sklearn.metrics import mean_squared_error
 import mlflow.pyfunc
 
 
-class CustomModelWrapper(mlflow.pyfunc.PythonModel):
-    def __init__(self, model):
-        self.model = model
-
-    def predict(self, context, model_input):
-        return self.model.predict(model_input)
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
+from commons.common_functions import CustomModelWrapper
 
 
-class LinearRegressionModel:
+class Model:
 
     def __init__(self, X_train, X_val, y_train, y_val, data, exp_name):
         self.X_train = X_train

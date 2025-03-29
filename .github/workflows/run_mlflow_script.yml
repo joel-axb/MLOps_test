@@ -35,33 +35,34 @@ jobs:
       - name: Extract CUSTOMER_ID, SKU, RUN_ID from Commit Message
         run: |
           COMMIT_MSG=$(git log -1 --pretty=%B)
+          echo "📝 Commit Message: $COMMIT_MSG"
           
-          CUSTOMER_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=CUSTOMER_ID=)[a-zA-Z0-9]+')
-          SKU=$(echo "$COMMIT_MSG" | grep -oP '(?<=SKU=)[\w-]+')
-          RUN_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=RUN_ID=)[a-zA-Z0-9]+')
+          CUSTOMER_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=CUSTOMER_ID=)[a-zA-Z0-9]+' || true)
+          SKU=$(echo "$COMMIT_MSG" | grep -oP '(?<=SKU=)[\w-]+' || true)
+          RUN_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=RUN_ID=)[a-zA-Z0-9]+' || true)
+ 
 
-          if [ -z "$CUSTOMER_ID" ]; then
-            echo "⚠️ Warning: No CUSTOMER_ID found!"
-          else
-            echo "CUSTOMER_ID=$CUSTOMER_ID" >> $GITHUB_ENV
-            echo "✅ Extracted CUSTOMER_ID: $CUSTOMER_ID"
+          if [ -z "$CUSTOMER_ID" ] || [ -z "$SKU" ] || [ -z "$RUN_ID" ]; then
+            echo "🚫 필수 파라미터 누락! CUSTOMER_ID, SKU, RUN_ID 중 하나라도 없으면 워크플로우 중단"
+            echo "CUSTOMER_ID=$CUSTOMER_ID"
+            echo "SKU=$SKU"
+            echo "RUN_ID=$RUN_ID"
+            echo "skip_workflow=true" >> $GITHUB_ENV
+            exit 0
           fi
 
-          if [ -z "$SKU" ]; then
-            echo "⚠️ Warning: No SKU found!"
-          else
-            echo "SKU=$SKU" >> $GITHUB_ENV
-            echo "✅ Extracted SKU: $SKU"
-          fi
+          echo "✅ Extracted CUSTOMER_ID=$CUSTOMER_ID, SKU=$SKU, RUN_ID=$RUN_ID"
 
-          if [ -z "$RUN_ID" ]; then
-            echo "🚨 No RUN_ID found! Exiting."
-            exit 1
-          fi
+          echo "CUSTOMER_ID=$CUSTOMER_ID" >> $GITHUB_ENV
+          echo "SKU=$SKU" >> $GITHUB_ENV
           echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
-          echo "🔍 Extracted RUN_ID: $RUN_ID"
+
+
 
       - name: Fetch new and old metrics
+
+        if: env.skip_workflow != 'true'
+
         env:
           CUSTOMER_ID: ${{ env.CUSTOMER_ID }}
           SKU: ${{ env.SKU }}
@@ -76,37 +77,59 @@ jobs:
           # Read the metrics from the output file
           new_metric=$(cat metrics_output.txt | grep "NEW_METRIC" | cut -d '=' -f2)
           old_metric=$(cat metrics_output.txt | grep "OLD_METRIC" | cut -d '=' -f2)
+          is_first_model=$(grep "IS_FIRST_MODEL" metrics_output.txt | cut -d '=' -f2)
 
           echo "NEW_METRIC=$new_metric" >> $GITHUB_ENV
           echo "OLD_METRIC=$old_metric" >> $GITHUB_ENV
+          echo "IS_FIRST_MODEL=$is_first_model" >> $GITHUB_ENV
 
 
       - name: Compare new vs old metrics
+
+
+        if: env.skip_workflow != 'true'
+
         run: |
           echo "Comparing NEW_METRIC=${{ env.NEW_METRIC }} vs OLD_METRIC=${{ env.OLD_METRIC }}"
 
           if (( $(echo "${{ env.NEW_METRIC }} < ${{ env.OLD_METRIC }}" | bc -l) )); then
             echo "metric_check=success" >> $GITHUB_ENV
+            echo "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ✅ Model Performance Improved"
+            echo: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
           else
             echo "metric_check=failure" >> $GITHUB_ENV
+            echo "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ⚠️ Model Performance Degraded or Same"
+            echo "New metric ${{ env.NEW_METRIC }} is worse than old one or same as before ${{ env.OLD_METRIC }}. Check model performance. :warning:"
           fi
 
       
-      - name: Slack notify on metric degradation
-        if: env.metric_check == 'failure'
+
+      # - name: Slack notify on metric degradation
+      #   if: env.metric_check == 'failure'
+      #   uses: rtCamp/action-slack-notify@v2
+      #   env:
+      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+      #     SLACK_COLOR: "#FF0000"
+      #     SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ⚠️ Model Performance Degraded or Same"
+      #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one or same as before ${{ env.OLD_METRIC }}. Check model performance. :warning:"
+
+
+      # - name: Slack notify on metric improvement
+      #   if: env.metric_check == 'success'
+      #   uses: rtCamp/action-slack-notify@v2
+      #   env:
+      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+      #     SLACK_COLOR: "#36A64F"
+      #     SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ✅ Model Performance Improved"
+      #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
+
+ 
+
+      - name: Slack notify on first model registration
+        if: env.IS_FIRST_MODEL == 'true'
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
-          SLACK_COLOR: "#FF0000"
-          SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ⚠️ Model Performance Degraded or Same"
-          SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one or same as before ${{ env.OLD_METRIC }}. Check model performance. :warning:"
-
-
-      - name: Slack notify on metric improvement
-        if: env.metric_check == 'success'
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
-          SLACK_COLOR: "#36A64F"
-          SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ✅ Model Performance Improved"
-          SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
+          SLACK_COLOR: "#439FE0"
+          SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] 📦 First Model Registered"
+          SLACK_MESSAGE: "No previous model found. This run is registered as the first version for ${{ env.CUSTOMER_ID }} & ${{ env.SKU }}."

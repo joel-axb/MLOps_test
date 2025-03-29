@@ -60,7 +60,6 @@ jobs:
       - name: Fetch new and old metrics
 
         if: env.skip_workflow != 'true'
-        ...
 
         env:
           CUSTOMER_ID: ${{ env.CUSTOMER_ID }}
@@ -85,9 +84,7 @@ jobs:
 
 
         if: env.skip_workflow != 'true'
-        ...
 
-        
         run: |
           echo "Comparing NEW_METRIC=${{ env.NEW_METRIC }} vs OLD_METRIC=${{ env.OLD_METRIC }}"
 

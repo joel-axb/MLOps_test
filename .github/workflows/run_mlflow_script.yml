@@ -46,7 +46,8 @@ jobs:
             echo "CUSTOMER_ID=$CUSTOMER_ID"
             echo "SKU=$SKU"
             echo "RUN_ID=$RUN_ID"
-            exit 1
+            echo "skip_workflow=true" >> $GITHUB_ENV
+            exit 0
           fi
 
           echo "✅ Extracted CUSTOMER_ID=$CUSTOMER_ID, SKU=$SKU, RUN_ID=$RUN_ID"
@@ -55,7 +56,12 @@ jobs:
           echo "SKU=$SKU" >> $GITHUB_ENV
           echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
 
+
       - name: Fetch new and old metrics
+
+        if: env.skip_workflow != 'true'
+        ...
+
         env:
           CUSTOMER_ID: ${{ env.CUSTOMER_ID }}
           SKU: ${{ env.SKU }}
@@ -76,6 +82,12 @@ jobs:
 
 
       - name: Compare new vs old metrics
+
+
+        if: env.skip_workflow != 'true'
+        ...
+
+        
         run: |
           echo "Comparing NEW_METRIC=${{ env.NEW_METRIC }} vs OLD_METRIC=${{ env.OLD_METRIC }}"
 

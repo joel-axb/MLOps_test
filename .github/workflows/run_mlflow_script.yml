@@ -44,7 +44,6 @@ jobs:
           RUN_ID=$(echo "$CLEAN_MSG" | grep -oP '(?<=RUN_ID=)[\w-]+' || true)
  
  
-
           if [ -z "$CUSTOMER_ID" ] || [ -z "$SKU" ] || [ -z "$RUN_ID" ]; then
             echo "🚫 필수 파라미터 누락! CUSTOMER_ID, SKU, RUN_ID 중 하나라도 없으면 워크플로우 중단"
             echo "CUSTOMER_ID=$CUSTOMER_ID"

@@ -35,7 +35,7 @@ jobs:
       - name: Extract CUSTOMER_ID, SKU, RUN_ID from Commit Message
         run: |
           COMMIT_MSG=$(git log -1 --pretty=%B)
-          CLEAN_MSG=$(echo "$COMMIT_MSG" | tr '\n' ' ')  # 모든 줄바꿈 제거
+          CLEAN_MSG=$(echo "$COMMIT_MSG" | tr '\n' '')  # 모든 줄바꿈 제거
 
           echo "📝 Commit Message: $CLEAN_MSG"
 

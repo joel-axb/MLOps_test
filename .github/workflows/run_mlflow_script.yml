@@ -35,11 +35,13 @@ jobs:
       - name: Extract CUSTOMER_ID, SKU, RUN_ID from Commit Message
         run: |
           COMMIT_MSG=$(git log -1 --pretty=%B)
-          echo "📝 Commit Message: $COMMIT_MSG"
-          
-          CUSTOMER_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=CUSTOMER_ID=)[a-zA-Z0-9]+' || true)
-          SKU=$(echo "$COMMIT_MSG" | grep -oP '(?<=SKU=)[\w-]+' || true)
-          RUN_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=RUN_ID=)[\w-]+' || true)
+          CLEAN_MSG=$(echo "$COMMIT_MSG" | tr '\n' ' ')  # 모든 줄바꿈 제거
+
+          echo "📝 Commit Message: $CLEAN_MSG"
+
+          CUSTOMER_ID=$(echo "$CLEAN_MSG" | grep -oP '(?<=CUSTOMER_ID=)[a-zA-Z0-9]+' || true)
+          SKU=$(echo "$CLEAN_MSG" | grep -oP '(?<=SKU=)[\w-]+' || true)
+          RUN_ID=$(echo "$CLEAN_MSG" | grep -oP '(?<=RUN_ID=)[\w-]+' || true)
  
 
           if [ -z "$CUSTOMER_ID" ] || [ -z "$SKU" ] || [ -z "$RUN_ID" ]; then

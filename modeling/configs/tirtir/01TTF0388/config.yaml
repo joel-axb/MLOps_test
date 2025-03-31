@@ -4,3 +4,4 @@ store_id: shopify
 custom_module_path: modeling/custom_models/tirtir__sku002.py
 customed: 0
 model_type: random_forest
+dat_preprocessing: pre_processing.py

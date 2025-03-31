@@ -13,7 +13,7 @@ from commons.common_functions import CustomModelWrapper
 
 class Model:
 
-    def __init__(self, X_train, X_val, y_train, y_val, data, exp_name):
+    def __init__(self, X_train, X_val, y_train, y_val, data, exp_name, PREPROCESSING_PATH):
         self.X_train = X_train
         self.X_val = X_val
         self.y_train = y_train
@@ -21,6 +21,7 @@ class Model:
         self.data = data
         self.dataset_dvc_path = '/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv.dvc'
         self.experiment_name = exp_name
+        self.PREPROCESSING_PATH = PREPROCESSING_PATH
 
     def run(self):
         mlflow.set_experiment(self.experiment_name)
@@ -58,6 +59,7 @@ class Model:
         dataset = mlflow.data.from_pandas(self.data, source=dataset_url)
 
         mlflow.pyfunc.log_model("random_forest_model", python_model=CustomModelWrapper(model))
+        mlflow.pyfunc.log_model("random_forest_model", code_paths=[self.PREPROCESSING_PATH])
         mlflow.log_input(dataset, context="training")
         mlflow.log_param("dataset_md5", dataset_md5)
         # mlflow.log_artifact(model_path)

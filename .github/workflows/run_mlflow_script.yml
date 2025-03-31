@@ -35,7 +35,7 @@ jobs:
       - name: Extract CUSTOMER_ID, SKU, RUN_ID from Commit Message
         run: |
           COMMIT_MSG=$(git log -1 --pretty=%B)
-          CLEAN_MSG=$(echo "$COMMIT_MSG" | tr '\n' '')  # 모든 줄바꿈 제거
+          CLEAN_MSG=$(echo "$COMMIT_MSG" | tr '\n' ' ')  # 모든 줄바꿈 제거
 
           echo "📝 Commit Message: $CLEAN_MSG"
 
@@ -43,6 +43,7 @@ jobs:
           SKU=$(echo "$CLEAN_MSG" | grep -oP '(?<=SKU=)[\w-]+' || true)
           RUN_ID=$(echo "$CLEAN_MSG" | grep -oP '(?<=RUN_ID=)[\w-]+' || true)
  
+
  
           if [ -z "$CUSTOMER_ID" ] || [ -z "$SKU" ] || [ -z "$RUN_ID" ]; then
             echo "🚫 필수 파라미터 누락! CUSTOMER_ID, SKU, RUN_ID 중 하나라도 없으면 워크플로우 중단"

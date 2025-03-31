@@ -39,7 +39,7 @@ jobs:
           
           CUSTOMER_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=CUSTOMER_ID=)[a-zA-Z0-9]+' || true)
           SKU=$(echo "$COMMIT_MSG" | grep -oP '(?<=SKU=)[\w-]+' || true)
-          RUN_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=RUN_ID=)[a-zA-Z0-9]+' || true)
+          RUN_ID=$(echo "$COMMIT_MSG" | grep -oP '(?<=RUN_ID=)[\w-]+' || true)
  
 
           if [ -z "$CUSTOMER_ID" ] || [ -z "$SKU" ] || [ -z "$RUN_ID" ]; then
@@ -103,7 +103,7 @@ jobs:
           fi
 
       
-      
+
 
       - name: Slack notify on metric degradation
         if: env.metric_check == 'failure'

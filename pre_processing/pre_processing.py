@@ -23,7 +23,7 @@ if __name__ == "__main__":
     df['day'] = df['order_date'].dt.day
     df['weekday'] = df['order_date'].dt.weekday  # e.g., Monday
 
-    df = df.drop(columns=['order_date'])
+    # df = df.drop(columns=['order_date'])
     # --------------------------
 
     # save final dataset

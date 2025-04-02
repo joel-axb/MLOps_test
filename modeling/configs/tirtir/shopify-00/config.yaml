@@ -1,0 +1,15 @@
+[{"customer_id": "tirtir",
+"sku": "01TTF0388",
+"store_id": "shopify-00",
+"custom_module_path": "modeling/models_customed/tirtir__sku002.py",
+"customed": 0,
+"model_type": ["random_forest", "prophet_test"],
+"dat_preprocessing": "pre_processing.py"}, 
+
+{"customer_id": "tirtir",
+"sku": "01TTX0017",
+"store_id": "shopify-00",
+"custom_module_path": "modeling/models_customed/tirtir__sku002.py",
+"customed": 0,
+"model_type": ["random_forest", 'prophet_test', 'tirtir_shopify_sku002'],
+"dat_preprocessing": "pre_processing.py"}]

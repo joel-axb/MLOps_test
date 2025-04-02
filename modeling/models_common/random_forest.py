@@ -13,7 +13,7 @@ from commons.common_functions import CustomModelWrapper
 
 class Model:
 
-    def __init__(self, X_train, X_val, y_train, y_val, data, exp_name, PREPROCESSING_PATH):
+    def __init__(self, X_train, X_val, y_train, y_val, data, exp_name, sku, PREPROCESSING_PATH):
         self.X_train = X_train
         self.X_val = X_val
         self.y_train = y_train
@@ -21,17 +21,22 @@ class Model:
         self.data = data
         self.dataset_dvc_path = '/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv.dvc'
         self.experiment_name = exp_name
+        self.sku = sku
         self.PREPROCESSING_PATH = PREPROCESSING_PATH
 
     def run(self):
         mlflow.set_experiment(self.experiment_name)
-
         mlflow.start_run()
 
-        model = RandomForestRegressor()
-        model.fit(self.X_train, self.y_train)
+        # -- little data-preprocessing --
+        X_train = self.X_train.drop(columns=['order_date'])
+        X_val = self.X_val.drop(columns=['order_date'])
+        # -------------------------------
 
-        y_pred = model.predict(self.X_val)
+        model = RandomForestRegressor()
+        model.fit(X_train, self.y_train)
+
+        y_pred = model.predict(X_val)
 
         mse = mean_squared_error(self.y_val, y_pred)
 
@@ -39,7 +44,7 @@ class Model:
 
         print(mlflow.get_artifact_uri())
         # ✅ Log Parameters, Metrics, and Model to MLflow
-        mlflow.log_param('model_type', 'prophet')
+        mlflow.log_param('model_type', 'random_forest')
         mlflow.log_metric("mape", mse)
 
     
@@ -59,9 +64,10 @@ class Model:
         dataset = mlflow.data.from_pandas(self.data, source=dataset_url)
 
         mlflow.pyfunc.log_model("random_forest_model", python_model=CustomModelWrapper(model))
-        mlflow.pyfunc.log_model("random_forest_model", code_paths=[self.PREPROCESSING_PATH])
+        # mlflow.pyfunc.log_model("random_forest_model", code_paths=[self.PREPROCESSING_PATH])
         mlflow.log_input(dataset, context="training")
         mlflow.log_param("dataset_md5", dataset_md5)
+        mlflow.log_param("sku", self.sku)
         # mlflow.log_artifact(model_path)
 
         if original_value is None:

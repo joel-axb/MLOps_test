@@ -44,9 +44,29 @@ def read_final_dataset(config):
         print("I will get the most recent data you did dvc push")
         with dvc.api.open(
             path="../data_temp_storage/final_data.csv",
-            repo=".",         # current repo
+            repo="None",         # current repo
             rev=None          # ← None = workspace (latest even if uncommitted)
         ) as fd:
             data = pd.read_csv(fd)
 
     return data
+
+
+
+def get_best_result_for_each_sku():
+
+    # 전체 실험(run) 정보 가져오기
+    experiment_name = "joel_20250402-3"
+    experiment = mlflow.get_experiment_by_name(experiment_name)
+    runs_df = mlflow.search_runs(experiment_ids=[experiment.experiment_id])
+
+    # 예시: rmse 기준으로 가장 성능 좋은 모델 선택
+    best_runs = (
+        runs_df
+        .sort_values("metrics.mape", ascending=True)
+        .groupby("params.sku")  # SKU 기준으로 그룹화
+        .first()  # 각 SKU별로 가장 좋은 run 하나
+        .reset_index()
+    )
+    print('!!')
+    print(best_runs[["params.sku", "params.model_type", "metrics.mape", "run_id"]])

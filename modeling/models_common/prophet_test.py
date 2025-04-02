@@ -48,7 +48,7 @@ from commons.common_functions import CustomModelWrapper
     
 class Model:
 
-    def __init__(self, X_train, X_val, y_train, y_val, data, exp_name):
+    def __init__(self, X_train, X_val, y_train, y_val, data, exp_name, sku, PREPROCESSING_PATH):
         self.X_train = X_train
         self.X_val = X_val
         self.y_train = y_train
@@ -56,6 +56,8 @@ class Model:
         self.data = data
         self.dataset_dvc_path = '/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv.dvc'
         self.experiment_name = exp_name
+        self.sku = sku
+        self.PREPROCESSING_PATH = PREPROCESSING_PATH
 
     # if __name__ == "__main__":
     def run(self):
@@ -91,6 +93,9 @@ class Model:
 
         train_df = pd.concat([self.X_train, self.y_train], axis=1)
         test_df = pd.concat([self.X_val, self.y_val], axis=1)
+
+        train_df = train_df[['order_date', 'count']]
+        test_df = test_df[['order_date', 'count']]
 
         train_df.columns = ["ds", "y"]
         train_df["ds"] = pd.to_datetime(train_df["ds"])
@@ -140,6 +145,8 @@ class Model:
         mlflow.pyfunc.log_model("random_forest_model", python_model=CustomModelWrapper(model))
         mlflow.log_input(dataset, context="training")
         mlflow.log_param("dataset_md5", dataset_md5)
+        mlflow.log_param("sku", self.sku)
+
         # mlflow.log_artifact(model_path)
 
         if original_value is None:

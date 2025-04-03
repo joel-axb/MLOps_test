@@ -33,9 +33,14 @@ class Model:
 
         mlflow.start_run()
 
+        # -- little data-preprocessing --
+        X_train = self.X_train.drop(columns=['forecast_dt'])
+        X_val = self.X_val.drop(columns=['forecast_dt'])
+        # -------------------------------
+
         model = LinearRegression()
-        model.fit(self.X_train, self.y_train)
-        y_pred = model.predict(self.X_val)
+        model.fit(X_train, self.y_train)
+        y_pred = model.predict(X_val)
         mse = mean_squared_error(self.y_val, y_pred)
 
         print(mlflow.get_artifact_uri())
@@ -69,3 +74,6 @@ class Model:
 
         mlflow.end_run()
         print(f"✅ MAPE for Last 5 Days: {mse:.2f}%")
+
+
+        return y_pred

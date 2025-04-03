@@ -16,7 +16,7 @@ import dvc.api
 import pandas as pd
 
 import os
-from commons.common_functions import get_best_result
+# from commons.common_functions import get_best_result
 import tempfile, pickle
 
 
@@ -94,8 +94,8 @@ class Model:
         train_df = pd.concat([self.X_train, self.y_train], axis=1)
         test_df = pd.concat([self.X_val, self.y_val], axis=1)
 
-        train_df = train_df[['order_date', 'count']]
-        test_df = test_df[['order_date', 'count']]
+        train_df = train_df[['forecast_dt', 'sellout_raw']]
+        test_df = test_df[['forecast_dt', 'sellout_raw']]
 
         train_df.columns = ["ds", "y"]
         train_df["ds"] = pd.to_datetime(train_df["ds"])
@@ -155,4 +155,7 @@ class Model:
             os.environ["AWS_PROFILE"] = original_value
 
         mlflow.end_run()
-        print(f"✅ MAPE for Last 5 Days: {mape:.2f}%")
+        print(f"✅ MAPE: {mape:.2f}%")
+
+
+        return forecast['yhat'].values

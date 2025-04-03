@@ -11,5 +11,5 @@
 "store_id": "shopify-00",
 "custom_module_path": "modeling/models_customed/tirtir__sku002.py",
 "customed": 0,
-"model_type": ["random_forest", 'prophet_test', 'tirtir_shopify_sku002'],
+"model_type": ["random_forest", 'prophet_test', 'tirtir_shopify-00_01TTX0017'],
 "dat_preprocessing": "pre_processing.py"}]

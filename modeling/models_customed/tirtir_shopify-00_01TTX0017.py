@@ -1,25 +1,19 @@
 # models_common/linear_regression.py
 
 import mlflow
+import pickle
+import tempfile
 import yaml
 import os
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import mlflow.pyfunc
+from mlflow.data.pandas_dataset import PandasDataset
 
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
 
-
-class CustomModelWrapper(mlflow.pyfunc.PythonModel):
-    def __init__(self, model):
-        self.model = model
-
-    def predict(self, context, model_input):
-        
-        return self.model.predict(model_input)
-    
-
+from commons.common_functions import CustomModelWrapper
 
 class Model:
 
@@ -34,43 +28,25 @@ class Model:
         self.sku = sku
         self.PREPROCESSING_PATH = PREPROCESSING_PATH
 
-    def pre_processing_2(self):
+    def run(self):
+        mlflow.set_experiment(self.experiment_name)
 
+        mlflow.start_run()
 
         # -- little data-preprocessing --
         X_train = self.X_train.drop(columns=['forecast_dt'])
         X_val = self.X_val.drop(columns=['forecast_dt'])
         # -------------------------------
 
-
-
-        return X_train, X_val
-
-
-    def run(self):
-        mlflow.set_experiment(self.experiment_name)
-        mlflow.start_run()
-
-        X_train, X_val = self.pre_processing_2()
-
-
-        model = RandomForestRegressor()
+        model = LinearRegression()
         model.fit(X_train, self.y_train)
-
         y_pred = model.predict(X_val)
-
-
         mse = mean_squared_error(self.y_val, y_pred)
 
-        # dataset_url = dvc.api.get_url('/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv')
-
         print(mlflow.get_artifact_uri())
-        # ✅ Log Parameters, Metrics, and Model to MLflow
-        mlflow.log_param('model_type', 'random_forest')
+        mlflow.log_param('model_type', 'customed_linear_regression')
         mlflow.log_metric("mape", mse)
 
-    
-        
         original_value = os.getenv("AWS_PROFILE")
         os.environ["AWS_PROFILE"] = "axb-dev-general"
 
@@ -85,24 +61,11 @@ class Model:
         dataset_url = f's3://data-pipeline.prod.acrossb.net/tmp/mlops_test/dvc/files/md5/{folder_name}/{file_name}'
         dataset = mlflow.data.from_pandas(self.data, source=dataset_url)
 
-        # from commons.common_functions import CustomModelWrapper
-
-        mlflow.pyfunc.log_model("random_forest_model", python_model=CustomModelWrapper(model))
-        # mlflow.pyfunc.log_model("random_forest_model", code_paths=[self.PREPROCESSING_PATH])
+        mlflow.pyfunc.log_model("linear_model", python_model=CustomModelWrapper(model))
         mlflow.log_input(dataset, context="training")
         mlflow.log_param("dataset_md5", dataset_md5)
         mlflow.log_param("sku", self.sku)
-        mlflow.log_artifact("/Users/joel/Documents/github/MLOps_test/pre_processing/pre_processing.py")
-        mlflow.log_artifact(__file__)
-        mlflow.log_artifact("/Users/joel/Documents/github/MLOps_test/pre_processing/get_data_from_athena.py")
-
-        folder_to_log = "/Users/joel/Documents/github/MLOps_test/pre_processing/queries"
-        artifact_folder_name = "queries"
-
-        for filename in os.listdir(folder_to_log):
-            full_path = os.path.join(folder_to_log, filename)
-            if os.path.isfile(full_path):
-                mlflow.log_artifact(full_path, artifact_path=artifact_folder_name)
+        # mlflow.log_artifact(model_path)
 
         if original_value is None:
             del os.environ["AWS_PROFILE"]
@@ -110,9 +73,7 @@ class Model:
             os.environ["AWS_PROFILE"] = original_value
 
         mlflow.end_run()
-        print(f"✅ MAPE: {mse:.2f}%")
-
-
+        print(f"✅ MAPE for Last 5 Days: {mse:.2f}%")
 
 
         return y_pred

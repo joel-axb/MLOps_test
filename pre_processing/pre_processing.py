@@ -1,33 +1,78 @@
 import pandas as pd
 from get_data_from_athena import fetch_athena_query_as_dataframe
+import matplotlib.pyplot as plt
 
-
-if __name__ == "__main__": 
+def prepare_dataset(save_path):
     
     # get tables from Athena
-    orders = fetch_athena_query_as_dataframe('get_orders')
+    sellout_raw = fetch_athena_query_as_dataframe('get_sellout_timeseries')
     sellout_derived = fetch_athena_query_as_dataframe('get_sellout_derived')
     sellout_timeseries = fetch_athena_query_as_dataframe('get_sellout_timeseries')
 
 
     # data pre-processing ------
     
-    df = orders
+    # 첫 번째 병합 (겹치는 컬럼엔 _dup1 붙이기)
+    merged_df_1 = pd.merge(
+        sellout_raw,
+        sellout_derived,
+        on=["sku", "store_id", "customer_id", "forecast_dt"],
+        how="left",
+        suffixes=("", "_dup1")
+    )
 
-    df['order_date'] = pd.to_datetime(df['order_date'])
+    # 두 번째 병합 (겹치는 컬럼엔 _dup2 붙이기)
+    merged_df_2 = pd.merge(
+        merged_df_1,
+        sellout_timeseries,
+        on=["sku", "store_id", "customer_id", "forecast_dt"],
+        how="left",
+        suffixes=("", "_dup2")
+    )
+
+
+    merged_df_2["sellout"] = merged_df_2["sellout"].astype(float)
+    merged_df_2["sellout_raw"] = merged_df_2["sellout_raw"].astype(float)
+    merged_df_2["forecast_dt"] = pd.to_datetime(merged_df_2["forecast_dt"])
+
+    merged_df_2 = merged_df_2.sort_values("forecast_dt")
+
+    merged_df_2 = merged_df_2[merged_df_2['forecast_dt']<'2025-02-01']
+
+
+    merged_df_2["sellout_raw"] = merged_df_2["sellout_raw"].interpolate(method="linear")
+    merged_df_2["sellout"] = merged_df_2["sellout"].interpolate(method="linear")
+
+
+    # 중복된 컬럼 제거
+    merged_df_2 = merged_df_2[[col for col in merged_df_2.columns if not col.endswith("_dup1") and not col.endswith("_dup2")]]
+
+    # data pre-processing ------
 
     # Extract components
-    df['year'] = df['order_date'].dt.year
-    df['month'] = df['order_date'].dt.month
-    df['week'] = df['order_date'].dt.isocalendar().week
-    df['day'] = df['order_date'].dt.day
-    df['weekday'] = df['order_date'].dt.weekday  # e.g., Monday
+    merged_df_2['year'] = merged_df_2['forecast_dt'].dt.year
+    merged_df_2['month'] = merged_df_2['forecast_dt'].dt.month
+    merged_df_2['week'] = merged_df_2['forecast_dt'].dt.isocalendar().week
+    merged_df_2['day'] = merged_df_2['forecast_dt'].dt.day
+    merged_df_2['weekday'] = merged_df_2['forecast_dt'].dt.weekday  # e.g., Monday
 
-    # df = df.drop(columns=['order_date'])
+    # merged_df_2 = merged_df_2.drop(columns=['forecast_dt'])
     # --------------------------
 
     # save final dataset
     print("Data pre-processing done")
-    print(f"shape: {df.shape}")
-    print(f"columns: {df.columns}")
-    df.to_csv("/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv", index=False)
+    print(f"shape: {merged_df_2.shape}")
+    print(f"columns: {merged_df_2.columns}")
+
+    if save_path is None:
+        merged_df_2.to_csv(save_path, index=False)
+
+    else:
+        merged_df_2.to_csv(save_path, index=False)
+
+    return merged_df_2
+
+
+if __name__ == "__main__": 
+
+    prepare_dataset("/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv")

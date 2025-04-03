@@ -1,5 +1,5 @@
 import yaml
-from common_functions import read_final_dataset
+from common_functions import read_final_dataset, get_visualized_result
 from model_factory import get_model_runner as build_model
 from sklearn.model_selection import train_test_split
 import importlib.util, os
@@ -45,7 +45,7 @@ for config in filtered_configs:
     customer = config["customer_id"]
     store_id = config["store_id"]
     sku = config["sku"]
-    customed = config["customed"]
+    # customed = config["customed"]
     model_type = config["model_type"] #list
     data_preprocessing = config["dat_preprocessing"]
 
@@ -62,10 +62,24 @@ for config in filtered_configs:
     data = read_final_dataset(config)
     data = data[data['sku']==sku]
     
-    # get train and test set
-    X = data.drop(columns=["count", "sku"])
-    y = data['count']
-    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
+    # # get train and test set
+    # X = data.drop(columns=["sellout_raw", "sku", "customer_id", "store_id"])
+    # y = data['sellout_raw']
+    # X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    # 날짜 기준으로 train/val 나누기
+    train_mask = data["forecast_dt"] < "2025-01-01"
+    val_mask = data["forecast_dt"] >= "2025-01-01"
+
+    X = data.drop(columns=["sellout_raw", "sku", "customer_id", "store_id"])
+    y = data[['forecast_dt', 'sellout_raw']]
+
+    X_train = X[train_mask]
+    X_val = X[val_mask]
+    y_train = y['sellout_raw'][train_mask]
+    y_val = y['sellout_raw'][val_mask]
+
+
 
     for one_model_type in model_type:
 
@@ -74,8 +88,9 @@ for config in filtered_configs:
             model_runner = build_model(one_model_type)
             model = model_runner(X_train, X_val, y_train, y_val, data, 
                                 exp_name, sku, PREPROCESSING_PATH)
-            model.run()
+            y_pred = model.run()
 
+            # get_visualized_result(y[val_mask], y_pred)
 
 
         # when the model is a customed one
@@ -90,4 +105,6 @@ for config in filtered_configs:
             ModelClass = getattr(module, 'Model')
             model_instance = ModelClass(X_train, X_val, y_train, y_val, data, 
                                         exp_name, sku, PREPROCESSING_PATH)
-            model_instance.run()
+            y_pred = model_instance.run()
+
+            # get_visualized_result(y[val_mask], y_pred.values)

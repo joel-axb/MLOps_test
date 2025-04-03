@@ -1,0 +1,19 @@
+[{"customer_id": "cosrx",
+"sku": "SC40AS01",
+"store_id": "shopify-us",
+"model_type": ["random_forest", "prophet_test"],
+"dat_preprocessing": "pre_processing.py"}, 
+
+{"customer_id": "cosrx",
+"sku": "SC50AS01",
+"store_id": "shopify-us",
+"model_type": ["random_forest", 'prophet_test', linear_regression],
+"dat_preprocessing": "pre_processing.py"},
+
+{"customer_id": "cosrx",
+"sku": "SC40TR03",
+"store_id": "shopify-us",
+"model_type": ["random_forest", 'prophet_test', cosrx_shopify-us_SC40TR03],
+"dat_preprocessing": "pre_processing.py"}
+
+]

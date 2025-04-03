@@ -17,7 +17,7 @@ from commons.common_functions import CustomModelWrapper
 
 class Model:
 
-    def __init__(self, X_train, X_val, y_train, y_val, data, exp_name):
+    def __init__(self, X_train, X_val, y_train, y_val, data, exp_name, sku, PREPROCESSING_PATH):
         self.X_train = X_train
         self.X_val = X_val
         self.y_train = y_train
@@ -25,19 +25,26 @@ class Model:
         self.data = data
         self.dataset_dvc_path = '/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv.dvc'
         self.experiment_name = exp_name
+        self.sku = sku
+        self.PREPROCESSING_PATH = PREPROCESSING_PATH
 
     def run(self):
         mlflow.set_experiment(self.experiment_name)
 
         mlflow.start_run()
 
+        # -- little data-preprocessing --
+        X_train = self.X_train.drop(columns=['forecast_dt'])
+        X_val = self.X_val.drop(columns=['forecast_dt'])
+        # -------------------------------
+
         model = LinearRegression()
-        model.fit(self.X_train, self.y_train)
-        y_pred = model.predict(self.X_val)
+        model.fit(X_train, self.y_train)
+        y_pred = model.predict(X_val)
         mse = mean_squared_error(self.y_val, y_pred)
 
         print(mlflow.get_artifact_uri())
-        mlflow.log_param('model_type', 'linear_regression')
+        mlflow.log_param('model_type', 'customed_linear_regression')
         mlflow.log_metric("mape", mse)
 
         original_value = os.getenv("AWS_PROFILE")
@@ -57,6 +64,7 @@ class Model:
         mlflow.pyfunc.log_model("linear_model", python_model=CustomModelWrapper(model))
         mlflow.log_input(dataset, context="training")
         mlflow.log_param("dataset_md5", dataset_md5)
+        mlflow.log_param("sku", self.sku)
         # mlflow.log_artifact(model_path)
 
         if original_value is None:
@@ -66,3 +74,6 @@ class Model:
 
         mlflow.end_run()
         print(f"✅ MAPE for Last 5 Days: {mse:.2f}%")
+
+
+        return y_pred

@@ -1,15 +1,21 @@
 [
   
-{"exp_name": "joel_20250403",
-"customer_id": "cosrx",
-"store_id": "shopify-us",
-"all": False,
-"sku_list": ['SC40AS01', 'SC50AS01', 'SC40TR03']},
+# {"exp_name": "joel_20250403",
+# "customer_id": "cosrx",
+# "store_id": "shopify-us",
+# "all": False,
+# "sku_list": ['SC40AS01', 'SC50AS01', 'SC40TR03']},
+
+# {"exp_name": "joel_20250403",
+# "customer_id": "beautyofjoseon",
+# "store_id": "shopify-00",
+# "all": False,
+# "sku_list": ['82BU001', '82BU006']},
 
 {"exp_name": "joel_20250403",
-"customer_id": "beautyofjoseon",
-"store_id": "shopify-00",
+"customer_id": "brand501",
+"store_id": "shopify-01",
 "all": False,
-"sku_list": ['82BU001', '82BU006']},
+"sku_list": ['MX00085', 'MXCB021']},
 
 ]

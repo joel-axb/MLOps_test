@@ -7,7 +7,7 @@ import pandas as pd
 import argparse
 
 
-exp_name = 'testtest_5'
+exp_name = 'testtest_6'
 # parser = argparse.ArgumentParser()
 # parser.add_argument("--customer", required=True)
 # parser.add_argument("--sku", required=True)
@@ -78,14 +78,14 @@ for customer_id, store_id, sku_list, is_all in zip(customer_list, store_id_list,
         data = read_final_dataset(config)
         data = data[data['sku']==sku]
         
-        # # get train and test set
+        # # get train and test set  
         # X = data.drop(columns=["sellout_raw", "sku", "customer_id", "store_id"])
         # y = data['sellout_raw']
         # X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
         # 날짜 기준으로 train/val 나누기
-        train_mask = data["forecast_dt"] < "2025-01-01"
-        val_mask = data["forecast_dt"] >= "2025-01-01"
+        train_mask = data["forecast_dt"] < "2024-11-01"
+        val_mask = data["forecast_dt"] >= "2024-11-01"
 
         X = data.drop(columns=["sellout_raw", "sku", "customer_id", "store_id"])
         y = data[['forecast_dt', 'sellout_raw']]

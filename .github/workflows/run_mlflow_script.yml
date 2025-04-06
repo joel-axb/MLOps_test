@@ -62,37 +62,31 @@ jobs:
 
 
 
-      - name: Fetch new and old metrics
-      
+      - name: Fetch and compare all metrics
         if: env.skip_workflow != 'true'
         env:
-          CUSTOMER_ID: ${{ env.CUSTOMER_ID }}
-          SKU: ${{ env.SKU }}
-          RUN_ID: ${{ env.RUN_ID }}
           MLFLOW_TRACKING_USERNAME: ${{ env.MLFLOW_TRACKING_USERNAME }}
           MLFLOW_TRACKING_PASSWORD: ${{ env.MLFLOW_TRACKING_PASSWORD }}
         run: |
           echo "Fetching metrics using Python..."
           cd modeling/commons
-          python get_metrics.py >> metrics_output.txt
+          python get_metrics.py > metrics_output.txt
 
-          # Parse the last line
-          last_line=$(tail -n 1 metrics_output.txt)
+          echo "🚀 Full model comparison results:"
+          cat metrics_output.txt
 
-          IFS=',' read -r customer store sku new_metric_str old_metric_str is_first_str <<< "$last_line"
+          while read -r line; do
+            IFS=',' read -r customer store sku new_metric_str old_metric_str is_first_str <<< "$line"
 
-          new_metric=$(echo "$new_metric_str" | cut -d '=' -f2)
-          old_metric=$(echo "$old_metric_str" | cut -d '=' -f2)
-          is_first_model=$(echo "$is_first_str" | cut -d '=' -f2)
+            new_metric=$(echo "$new_metric_str" | cut -d '=' -f2)
+            old_metric=$(echo "$old_metric_str" | cut -d '=' -f2)
+            is_first_model=$(echo "$is_first_str" | cut -d '=' -f2)
 
-          echo "✅ Parsed metrics:"
-          echo "NEW_METRIC=$new_metric"
-          echo "OLD_METRIC=$old_metric"
-          echo "IS_FIRST_MODEL=$is_first_model"
+            echo "🔍 [$customer | $store | $sku] → NEW=$new_metric, OLD=$old_metric, FIRST=$is_first_model"
 
-          echo "NEW_METRIC=$new_metric" >> $GITHUB_ENV
-          echo "OLD_METRIC=$old_metric" >> $GITHUB_ENV
-          echo "IS_FIRST_MODEL=$is_first_model" >> $GITHUB_ENV
+            # 여기서 바로 등록 여부 판단하거나, 파일 저장/Slack 알림 등 후처리 가능
+          done < metrics_output.txt
+
 
 
 

@@ -4,17 +4,17 @@ from dotenv import load_dotenv
 from common_functions import get_best_result_for_each_sku
 
 
-load_dotenv()
+# load_dotenv()
 
-# Read Run ID from GitHub Actions ENV
-run_id = os.getenv("RUN_ID")
-customer_id = os.getenv("CUSTOMER_ID")
-sku = os.getenv("SKU")
+# # Read Run ID from GitHub Actions ENV
+# run_id = os.getenv("RUN_ID")
+# customer_id = os.getenv("CUSTOMER_ID")
+# sku = os.getenv("SKU")
 
 bests = get_best_result_for_each_sku()
 
-if not run_id:
-    raise ValueError("🚨 RUN_ID is not set!")
+# if not run_id:
+#     raise ValueError("🚨 RUN_ID is not set!")
 
 for one_tuple in bests:
 

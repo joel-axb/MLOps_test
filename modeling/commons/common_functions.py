@@ -57,7 +57,7 @@ def read_final_dataset(config):
 def get_best_result_for_each_sku():
 
     # 전체 실험(run) 정보 가져오기
-    experiment_name = "testtest_3"
+    experiment_name = "testtest_5"
     experiment = mlflow.get_experiment_by_name(experiment_name)
     runs_df = mlflow.search_runs(experiment_ids=[experiment.experiment_id])
 

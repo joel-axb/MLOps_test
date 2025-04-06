@@ -23,6 +23,7 @@ store_id_list = []
 sku_lists = []
 all_list = []
 
+
 for one_config in total_config:
 
     # exp_name = total_config['exp_name']

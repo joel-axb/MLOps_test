@@ -1,19 +1,7 @@
 import mlflow
-import os
-from dotenv import load_dotenv
 from common_functions import get_best_result_for_each_sku
 
-# # Load env variables
-# load_dotenv()
-
 client = mlflow.tracking.MlflowClient()
-
-# Run from GitHub Actions ENV
-# run_id_env = os.getenv("RUN_ID")
-# customer_id_env = os.getenv("CUSTOMER_ID")
-# sku_env = os.getenv("SKU")
-
-# Get list of best runs
 bests = get_best_result_for_each_sku()
 
 if not bests:
@@ -40,7 +28,7 @@ for one_tuple in bests:
 
     results = client.search_registered_models(filter_string=filter_str)
 
-    # 등록된 모델이 없는 경우
+    # ✅ 1. 등록된 모델이 없는 경우
     if not results:
         model_uri = f"runs:/{run_id}/model"
         mlflow.register_model(model_uri=model_uri, name=model_name)
@@ -50,14 +38,13 @@ for one_tuple in bests:
         client.set_registered_model_tag(name=model_name, key="sku", value=sku)
 
         is_first_model = True
-
         print(
             f"{customer_id},{store_id},{sku},"
             f"NEW_METRIC={new_metric_value},OLD_METRIC=NA,IS_FIRST_MODEL={is_first_model}"
         )
         continue
 
-    # 등록된 모델이 있을 경우
+    # ✅ 2. 등록된 모델이 있는 경우
     model = results[0]
     latest_version = model.latest_versions[0]
     existing_run = client.get_run(run_id=latest_version.run_id)
@@ -69,6 +56,22 @@ for one_tuple in bests:
     current_metric_value = existing_run.data.metrics.get(new_metric_name, "N/A")
     is_first_model = False
 
+    try:
+        if float(new_metric_value) < float(current_metric_value):
+            print(f"✅ New model is better for {model_name}! Registering new version.")
+
+            model_uri = f"runs:/{run_id}/model"
+            mlflow.register_model(model_uri=model_uri, name=model_name)
+
+            client.set_registered_model_tag(name=model_name, key="customer_id", value=customer_id)
+            client.set_registered_model_tag(name=model_name, key="store_id", value=store_id)
+            client.set_registered_model_tag(name=model_name, key="sku", value=sku)
+        else:
+            print(f"⚠️ New model is worse or equal for {model_name}. Not registering.")
+    except Exception as e:
+        print(f"⚠️ Metric comparison failed: {e}")
+
+    # ✅ 최종 출력
     print(
         f"{customer_id},{store_id},{sku},"
         f"NEW_METRIC={new_metric_value},OLD_METRIC={current_metric_value},IS_FIRST_MODEL={is_first_model}"

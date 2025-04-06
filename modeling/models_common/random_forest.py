@@ -52,11 +52,16 @@ class Model:
 
 
     def run(self):
+
         mlflow.set_experiment(self.experiment_name)
         mlflow.start_run()
 
         X_train, X_val = self.pre_processing_2()
 
+        train_start_dt = self.X_train['forecast_dt'].min()
+        train_end_dt = self.X_train['forecast_dt'].max()
+        test_start_dt = self.X_val['forecast_dt'].min()
+        test_end_dt = self.X_val['forecast_dt'].max()
 
         model = RandomForestRegressor()
         model.fit(X_train, self.y_train)
@@ -97,6 +102,12 @@ class Model:
         mlflow.log_param("dataset_md5", dataset_md5)
         mlflow.log_param("sku", self.sku)
         mlflow.log_param("customer_id", self.customer_id)
+
+        mlflow.log_param("train_start_dt", train_start_dt)
+        mlflow.log_param("train_end_dt", train_end_dt)
+        mlflow.log_param("test_start_dt", test_start_dt)
+        mlflow.log_param("test_end_dt", test_end_dt)
+
         mlflow.log_param("store_id", self.store_id)
         mlflow.log_artifact("/Users/joel/Documents/github/MLOps_test/pre_processing/pre_processing.py")
         mlflow.log_artifact(__file__)

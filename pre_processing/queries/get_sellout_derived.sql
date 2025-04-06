@@ -6,6 +6,5 @@ SELECT
     sellout_raw,
     forecast_dt
 from demand_forecast.sellout_derived
-where customer_id = 'cosrx' and
-    store_id = 'shopify-us' and
-    sku in ('SC40AS01', 'SC50AS01', 'SC40TR03')
+where customer_id in {customer_id} and
+    store_id in {store_id}

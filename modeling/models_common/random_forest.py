@@ -23,7 +23,9 @@ class CustomModelWrapper(mlflow.pyfunc.PythonModel):
 
 class Model:
 
-    def __init__(self, X_train, X_val, y_train, y_val, data, exp_name, sku, PREPROCESSING_PATH):
+    def __init__(self, X_train, X_val, y_train, y_val, data, 
+                exp_name, customer, store_id, sku, PREPROCESSING_PATH):
+        
         self.X_train = X_train
         self.X_val = X_val
         self.y_train = y_train
@@ -31,6 +33,8 @@ class Model:
         self.data = data
         self.dataset_dvc_path = '/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv.dvc'
         self.experiment_name = exp_name
+        self.customer_id = customer
+        self.store_id = store_id
         self.sku = sku
         self.PREPROCESSING_PATH = PREPROCESSING_PATH
 
@@ -92,6 +96,8 @@ class Model:
         mlflow.log_input(dataset, context="training")
         mlflow.log_param("dataset_md5", dataset_md5)
         mlflow.log_param("sku", self.sku)
+        mlflow.log_param("customer_id", self.customer_id)
+        mlflow.log_param("store_id", self.store_id)
         mlflow.log_artifact("/Users/joel/Documents/github/MLOps_test/pre_processing/pre_processing.py")
         mlflow.log_artifact(__file__)
         mlflow.log_artifact("/Users/joel/Documents/github/MLOps_test/pre_processing/get_data_from_athena.py")

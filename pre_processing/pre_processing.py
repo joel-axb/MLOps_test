@@ -1,13 +1,54 @@
 import pandas as pd
 from get_data_from_athena import fetch_athena_query_as_dataframe
 import matplotlib.pyplot as plt
+import os
+import yaml
 
 def prepare_dataset(save_path):
+
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # 현재 commons/
+    TOTAL_CONFIG_PATH = os.path.join(BASE_DIR, "../modeling/commons", "test_lists.yaml")
+    # load config.yaml
+    with open(TOTAL_CONFIG_PATH, "r") as f:
+        total_config = yaml.safe_load(f)
+
+    customer_list = []
+    store_id_list = []
+
+
+
+    for one_config in total_config:
+
+        # exp_name = total_config['exp_name']
+        customer_list.append(one_config["customer_id"])
+        store_id_list.append(one_config["store_id"])
+
+    customer_list = tuple(customer_list)
+    store_id_list = tuple(store_id_list)
     
     # get tables from Athena
-    sellout_raw = fetch_athena_query_as_dataframe('get_sellout_timeseries')
-    sellout_derived = fetch_athena_query_as_dataframe('get_sellout_derived')
-    sellout_timeseries = fetch_athena_query_as_dataframe('get_sellout_timeseries')
+    # sellout_raw = fetch_athena_query_as_dataframe('get_sellout_timeseries')
+    sellout_raw = fetch_athena_query_as_dataframe(
+        query_name="get_sellout_timeseries",
+        customer_id=customer_list,
+        store_id=store_id_list
+    )
+
+    print()
+    # sellout_derived = fetch_athena_query_as_dataframe('get_sellout_derived')
+    sellout_derived = fetch_athena_query_as_dataframe(
+        query_name="get_sellout_derived",
+        customer_id=customer_list,
+        store_id=store_id_list
+    )
+
+    # sellout_timeseries = fetch_athena_query_as_dataframe('get_sellout_timeseries')
+    sellout_timeseries = fetch_athena_query_as_dataframe(
+        query_name="get_sellout_timeseries",
+        customer_id=customer_list,
+        store_id=store_id_list
+    )
+
 
 
     # data pre-processing ------
@@ -74,5 +115,6 @@ def prepare_dataset(save_path):
 
 
 if __name__ == "__main__": 
+
 
     prepare_dataset("/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv")

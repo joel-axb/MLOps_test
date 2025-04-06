@@ -57,7 +57,7 @@ def read_final_dataset(config):
 def get_best_result_for_each_sku():
 
     # 전체 실험(run) 정보 가져오기
-    experiment_name = "joel_20250402-10"
+    experiment_name = "testtest_3"
     experiment = mlflow.get_experiment_by_name(experiment_name)
     runs_df = mlflow.search_runs(experiment_ids=[experiment.experiment_id])
 
@@ -65,14 +65,21 @@ def get_best_result_for_each_sku():
     best_runs = (
         runs_df
         .sort_values("metrics.mape", ascending=True)
-        .groupby("params.sku")  # SKU 기준으로 그룹화
+        .groupby(["params.customer_id", "params.store_id", "params.sku"])  # SKU 기준으로 그룹화
         .first()  # 각 SKU별로 가장 좋은 run 하나
         .reset_index()
     )
 
-    print(best_runs[["params.sku", "params.model_type", "metrics.mape", "run_id"]])
 
+    print(best_runs[["params.customer_id", "params.store_id", "params.sku", "params.model_type", "metrics.mape", "run_id"]])
     
+    best_runs.columns = [col.split(".")[-1] for col in best_runs.columns]
+
+    tuples = [
+    (row.customer_id, row.store_id, row.sku, row.run_id)
+    for row in best_runs.itertuples(index=False)]
+
+    return tuples
 
 
 
@@ -109,3 +116,8 @@ def get_visualized_result(preds_df, targets_array, title="Time Series Prediction
 
     plt.savefig(filename)  
 
+
+def load_query_template(customer_id, store_id):
+    with open("/Users/joel/Documents/github/MLOps_test/pre_processing/queries/get_master_items.sql", "r") as f:
+        sql = f.read()
+    return sql.format(customer_id=customer_id, store_id=store_id)

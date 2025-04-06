@@ -7,7 +7,7 @@ import pandas as pd
 import argparse
 
 
-exp_name = 'testtest_4'
+exp_name = 'testtest_5'
 # parser = argparse.ArgumentParser()
 # parser.add_argument("--customer", required=True)
 # parser.add_argument("--sku", required=True)

@@ -6,12 +6,12 @@ import argparse
 client = mlflow.tracking.MlflowClient()
 
 parser = argparse.ArgumentParser(description="Run experiment with a given name")
-parser.add_argument('--exp_name', type=str, required=True, help='Name of the experiment')
+parser.add_argument('--exp_id', type=str, required=True, help='Name of the experiment')
 args = parser.parse_args()
-exp_name = args.exp_name
+exp_id = args.exp_id
 
 
-bests = get_best_result_for_each_sku(exp_name)
+bests = get_best_result_for_each_sku(exp_id)
 
 if not bests:
     raise ValueError("🚨 No best runs found!")

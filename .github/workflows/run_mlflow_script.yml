@@ -80,6 +80,22 @@ jobs:
           path: modeling/commons/model_comparison_result.csv
 
 
+
+      - name: Slack notify via webhook
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+          SLACK_COLOR: "#FF0000"
+          SLACK_TITLE: "Model Comparison Result"
+          SLACK_MESSAGE: |
+            Some models degraded in the latest run.
+
+            📄 *Artifact:* `model_comparison_result.csv`
+            🔗 [Click here to download](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+
+      
+
+
       # - name: Compare new vs old metrics
 
 

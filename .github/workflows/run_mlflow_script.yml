@@ -74,7 +74,7 @@ jobs:
 
 
       - name: Upload result CSV to artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: model_comparison_result
           path: modeling/commons/model_comparison_result.csv

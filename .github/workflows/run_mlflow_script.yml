@@ -75,6 +75,10 @@ jobs:
           echo "🚀 Full model comparison results:"
           cat metrics_output.txt
 
+          # 초기화
+          echo "" > slack_message.txt
+          metric_check_success=true
+
           while read -r line; do
             IFS=',' read -r customer store sku new_metric_str old_metric_str is_first_str <<< "$line"
 
@@ -84,31 +88,72 @@ jobs:
 
             echo "🔍 [$customer | $store | $sku] → NEW=$new_metric, OLD=$old_metric, FIRST=$is_first_model"
 
-            # 여기서 바로 등록 여부 판단하거나, 파일 저장/Slack 알림 등 후처리 가능
+            if [ "$is_first_model" = "True" ]; then
+              echo "$customer, $store, $sku ✅ First model. Skip comparison." >> slack_message.txt
+              continue
+            fi
+
+            cmp=$(echo "$new_metric < $old_metric" | bc -l)
+            if [ "$cmp" -eq 1 ]; then
+              echo "$customer, $store, $sku ✅ Improved (NEW=$new_metric < OLD=$old_metric)" >> slack_message.txt
+            else
+              echo "$customer, $store, $sku ⚠️ Degraded or Same (NEW=$new_metric >= OLD=$old_metric)" >> slack_message.txt
+              metric_check_success=false
+            fi
           done < metrics_output.txt
 
 
 
-
-      - name: Compare new vs old metrics
-
-
-        if: env.skip_workflow != 'true'
-
-        run: |
-          echo "Comparing NEW_METRIC=${{ env.NEW_METRIC }} vs OLD_METRIC=${{ env.OLD_METRIC }}"
-
-          if (( $(echo "${{ env.NEW_METRIC }} < ${{ env.OLD_METRIC }}" | bc -l) )); then
-            echo "metric_check=success" >> $GITHUB_ENV
-            echo "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ✅ Model Performance Improved"
-            echo: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
-          else
+          if [ "$metric_check_success" = "false" ]; then
             echo "metric_check=failure" >> $GITHUB_ENV
-            echo "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ⚠️ Model Performance Degraded or Same"
-            echo "New metric ${{ env.NEW_METRIC }} is worse than old one or same as before ${{ env.OLD_METRIC }}. Check model performance. :warning:"
+          else
+            echo "metric_check=success" >> $GITHUB_ENV
           fi
 
-      
+
+
+
+
+      # - name: Compare new vs old metrics
+
+
+      #   if: env.skip_workflow != 'true'
+
+      #   run: |
+      #     echo "Comparing NEW_METRIC=${{ env.NEW_METRIC }} vs OLD_METRIC=${{ env.OLD_METRIC }}"
+
+      #     if (( $(echo "${{ env.NEW_METRIC }} < ${{ env.OLD_METRIC }}" | bc -l) )); then
+      #       echo "metric_check=success" >> $GITHUB_ENV
+      #       echo "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ✅ Model Performance Improved"
+      #       echo: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
+      #     else
+      #       echo "metric_check=failure" >> $GITHUB_ENV
+      #       echo "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ⚠️ Model Performance Degraded or Same"
+      #       echo "New metric ${{ env.NEW_METRIC }} is worse than old one or same as before ${{ env.OLD_METRIC }}. Check model performance. :warning:"
+      #     fi
+
+      - name: Read Slack message content
+        if: env.metric_check == 'failure'
+        id: collect_slack_output
+        run: |
+          message=$(cat modeling/commons/slack_message.txt)
+          echo "message<<EOF" >> $GITHUB_OUTPUT
+          echo "$message" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Slack notify
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+          SLACK_COLOR: "#FF0000"
+          SLACK_TITLE: "⚠️ Model Performance Alert"
+          SLACK_MESSAGE: ${{ steps.collect_slack_output.outputs.message }}
+
+
+
+
+
+
 
 
       # - name: Slack notify on metric degradation

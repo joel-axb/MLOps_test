@@ -73,7 +73,11 @@ jobs:
 
 
 
-
+      - name: Upload result CSV to artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: model_comparison_result
+          path: modeling/commons/model_comparison_result.csv
 
 
       # - name: Compare new vs old metrics
@@ -101,15 +105,20 @@ jobs:
       #     cat modeling/commons/slack_message.txt >> $GITHUB_OUTPUT
       #     echo "EOF" >> $GITHUB_OUTPUT
 
-      - name: Notify via Slack Webhook\
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
-          SLACK_COLOR: "#FF0000"
-          SLACK_TITLE: "⚠️ Model Comparison Result"
-          SLACK_MESSAGE: |
-            Some models degraded. Download the full result here:
-            👉 GitHub Actions Artifacts > model_comparison_result.csv
+
+
+
+
+
+      # - name: Notify via Slack Webhook\
+      #   uses: rtCamp/action-slack-notify@v2
+      #   env:
+      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+      #     SLACK_COLOR: "#FF0000"
+      #     SLACK_TITLE: "⚠️ Model Comparison Result"
+      #     SLACK_MESSAGE: |
+      #       Some models degraded. Download the full result here:
+      #       👉 GitHub Actions Artifacts > model_comparison_result.csv
 
 
 

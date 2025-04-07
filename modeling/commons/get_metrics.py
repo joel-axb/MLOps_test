@@ -1,9 +1,17 @@
 import mlflow
 import pandas as pd
 from common_functions import get_best_result_for_each_sku
+import argparse
 
 client = mlflow.tracking.MlflowClient()
-bests = get_best_result_for_each_sku()
+
+parser = argparse.ArgumentParser(description="Run experiment with a given name")
+parser.add_argument('--exp_name', type=str, required=True, help='Name of the experiment')
+args = parser.parse_args()
+exp_name = args.exp_name
+
+
+bests = get_best_result_for_each_sku(exp_name)
 
 if not bests:
     raise ValueError("🚨 No best runs found!")
@@ -94,6 +102,3 @@ print("📄 model_comparison_result.csv saved!")
 
 # ✅ 출력 (옵션)
 print(results_df)
-
-
-print()

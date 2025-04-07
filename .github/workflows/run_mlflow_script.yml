@@ -2,7 +2,7 @@ name: Auto-Run ML Model on Push
 
 on:
   push:
-      branches-ignore:  # ⛔ main 브랜치는 무시함
+      branches-ignore:  # ignore main branch
       - main
 
 jobs:
@@ -10,14 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
+      
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+
 
       - name: Set up Python    
         uses: actions/setup-python@v4
         with:
           python-version: "3.8"
+
+
 
       - name: Install Dependencies
         run: |
@@ -26,40 +30,31 @@ jobs:
           pip install dvc  # Ensure DVC is installed
           pip install mlflow jq
 
+
+
       - name: Extract MLflow Credentials from `env_1`
         run: |
           echo "MLFLOW_TRACKING_URI=${{ secrets.MLFLOW_TRACKING_URI }}" >> $GITHUB_ENV
           echo "MLFLOW_TRACKING_USERNAME=${{ secrets.MLFLOW_TRACKING_USERNAME }}" >> $GITHUB_ENV
           echo "MLFLOW_TRACKING_PASSWORD=${{ secrets.MLFLOW_TRACKING_PASSWORD }}" >> $GITHUB_ENV
 
-      # - name: Extract CUSTOMER_ID, SKU, RUN_ID from Commit Message
-      #   run: |
-      #     COMMIT_MSG=$(git log -1 --pretty=%B)
-      #     CLEAN_MSG=$(echo "$COMMIT_MSG" | tr '\n' ' ')  # 모든 줄바꿈 제거
 
-      #     echo "📝 Commit Message: $CLEAN_MSG"
+      - name: Extract EXP_ID from commit message
+        id: extract_exp_id
+        run: |
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          CLEAN_MSG=$(echo "$COMMIT_MSG" | tr '\n' ' ')
+          echo "📝 Commit message: $CLEAN_MSG"
 
-      #     CUSTOMER_ID=$(echo "$CLEAN_MSG" | grep -oP '(?<=CUSTOMER_ID=)[a-zA-Z0-9]+' || true)
-      #     SKU=$(echo "$CLEAN_MSG" | grep -oP '(?<=SKU=)[\w-]+' || true)
-      #     RUN_ID=$(echo "$CLEAN_MSG" | grep -oP '(?<=RUN_ID=)[\w-]+' || true)
- 
+          EXP_ID=$(echo "$CLEAN_MSG" | grep -oP '(?<=EXP_ID=)[\w\-]+' || true)
 
- 
-      #     if [ -z "$CUSTOMER_ID" ] || [ -z "$SKU" ] || [ -z "$RUN_ID" ]; then
-      #       echo "🚫 필수 파라미터 누락! CUSTOMER_ID, SKU, RUN_ID 중 하나라도 없으면 워크플로우 중단"
-      #       echo "CUSTOMER_ID=$CUSTOMER_ID"
-      #       echo "SKU=$SKU"
-      #       echo "RUN_ID=$RUN_ID"
-      #       echo "skip_workflow=true" >> $GITHUB_ENV
-      #       exit 0
-      #     fi
+          if [ -z "$EXP_ID" ]; then
+            echo "❌ EXP_ID not found in commit message"
+            exit 1
+          fi
 
-      #     echo "✅ Extracted CUSTOMER_ID=$CUSTOMER_ID, SKU=$SKU, RUN_ID=$RUN_ID"
-
-      #     echo "CUSTOMER_ID=$CUSTOMER_ID" >> $GITHUB_ENV
-      #     echo "SKU=$SKU" >> $GITHUB_ENV
-      #     echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
-
+          echo "✅ Found EXP_ID=$EXP_ID"
+          echo "EXP_ID=$EXP_ID" >> $GITHUB_ENV
 
 
       - name: Fetch and compare all metrics
@@ -67,9 +62,9 @@ jobs:
           MLFLOW_TRACKING_USERNAME: ${{ env.MLFLOW_TRACKING_USERNAME }}
           MLFLOW_TRACKING_PASSWORD: ${{ env.MLFLOW_TRACKING_PASSWORD }}
         run: |
-          echo "📥 Running get_metrics.py..."
+          echo "📥 Running get_metrics.py with EXP_ID=${{ env.EXP_ID }}"
           cd modeling/commons
-          python get_metrics.py
+          python get_metrics.py --exp_id=${{ env.EXP_ID }}
 
 
 
@@ -92,83 +87,3 @@ jobs:
 
             📄 *Artifact:* `model_comparison_result.csv`
             🔗 [Click here to download](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
-
-      
-
-
-      # - name: Compare new vs old metrics
-
-
-      #   if: env.skip_workflow != 'true'
-
-      #   run: |
-      #     echo "Comparing NEW_METRIC=${{ env.NEW_METRIC }} vs OLD_METRIC=${{ env.OLD_METRIC }}"
-
-      #     if (( $(echo "${{ env.NEW_METRIC }} < ${{ env.OLD_METRIC }}" | bc -l) )); then
-      #       echo "metric_check=success" >> $GITHUB_ENV
-      #       echo "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ✅ Model Performance Improved"
-      #       echo: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
-      #     else
-      #       echo "metric_check=failure" >> $GITHUB_ENV
-      #       echo "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}] ⚠️ Model Performance Degraded or Same"
-      #       echo "New metric ${{ env.NEW_METRIC }} is worse than old one or same as before ${{ env.OLD_METRIC }}. Check model performance. :warning:"
-      #     fi
-
-      # - name: Read Slack message content
-      #   id: collect_slack_output
-      #   run: |
-      #     echo "message<<EOF" >> $GITHUB_OUTPUT
-      #     cat modeling/commons/slack_message.txt >> $GITHUB_OUTPUT
-      #     echo "EOF" >> $GITHUB_OUTPUT
-
-
-
-
-
-
-      # - name: Notify via Slack Webhook\
-      #   uses: rtCamp/action-slack-notify@v2
-      #   env:
-      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
-      #     SLACK_COLOR: "#FF0000"
-      #     SLACK_TITLE: "⚠️ Model Comparison Result"
-      #     SLACK_MESSAGE: |
-      #       Some models degraded. Download the full result here:
-      #       👉 GitHub Actions Artifacts > model_comparison_result.csv
-
-
-
-
-
-
-
-
-      # - name: Slack notify on metric degradation
-      #   if: env.metric_check == 'failure'
-      #   uses: rtCamp/action-slack-notify@v2
-      #   env:
-      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
-      #     SLACK_COLOR: "#FF0000"
-      #     SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}, ${{ env.RUN_ID}}] ⚠️ Model Performance Degraded or Same"
-      #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is worse than old one or same as before ${{ env.OLD_METRIC }}. Check model performance. :warning:"
-
-
-      # - name: Slack notify on metric improvement
-      #   if: env.metric_check == 'success'
-      #   uses: rtCamp/action-slack-notify@v2
-      #   env:
-      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
-      #     SLACK_COLOR: "#36A64F"
-      #     SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}, ${{ env.RUN_ID}}] ✅ Model Performance Improved"
-      #     SLACK_MESSAGE: "New metric ${{ env.NEW_METRIC }} is same or better than old one ${{ env.OLD_METRIC }}. All good! :rocket:"
-
- 
-
-      # - name: Slack notify on first model registration
-      #   if: env.IS_FIRST_MODEL == 'true'
-      #   uses: rtCamp/action-slack-notify@v2
-      #   env:
-      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
-      #     SLACK_COLOR: "#439FE0"
-      #     SLACK_TITLE: "[${{ env.CUSTOMER_ID }}, ${{ env.SKU }}, ${{ env.RUN_ID}}] 📦 First Model Registered"
-      #     SLACK_MESSAGE: "No previous model found. This run is registered as the first version for ${{ env.CUSTOMER_ID }} & ${{ env.SKU }}."

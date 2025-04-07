@@ -7,7 +7,14 @@ import pandas as pd
 import argparse
 
 
-exp_name = 'testtest_6'
+
+parser = argparse.ArgumentParser(description="Run experiment with a given name")
+parser.add_argument('--exp_name', type=str, required=True, help='Name of the experiment')
+args = parser.parse_args()
+
+exp_name = args.exp_name
+
+
 # parser = argparse.ArgumentParser()
 # parser.add_argument("--customer", required=True)
 # parser.add_argument("--sku", required=True)

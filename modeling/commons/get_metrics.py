@@ -1,89 +1,104 @@
 import mlflow
-import os
-from dotenv import load_dotenv
+import pandas as pd
+from common_functions import get_best_result_for_each_sku
+import argparse
 
-
-load_dotenv()
-
-# Read Run ID from GitHub Actions ENV
-run_id = os.getenv("RUN_ID")
-customer_id = os.getenv("CUSTOMER_ID")
-sku = os.getenv("SKU")
-
-if not run_id:
-    raise ValueError("🚨 RUN_ID is not set!")
-
-
-# Fetch run details by run_id
 client = mlflow.tracking.MlflowClient()
 
-
-run = client.get_run(run_id=run_id)
-# experiment_id = run.info.experiment_id
-
-
-
-if not run:
-    raise ValueError(f"🚨 No run found for run_id: {run_id}")
-
-# Fetch the metric value (modify as needed)
-new_metric_name = "mape"  # Change this to the metric you need
-new_metric_value = run.data.metrics.get(new_metric_name, "N/A")
+parser = argparse.ArgumentParser(description="Run experiment with a given name")
+parser.add_argument('--exp_id', type=str, required=True, help='Name of the experiment')
+args = parser.parse_args()
+exp_id = args.exp_id
 
 
-print(f"✅ Fetched metric: {new_metric_name} = {new_metric_value} for run_id: {run_id}")
+bests = get_best_result_for_each_sku(exp_id)
 
+if not bests:
+    raise ValueError("🚨 No best runs found!")
 
-# Construct a description-based filter
-customer_id = f"{customer_id}"
-sku = f"{sku}"
+results_list = []
 
-# filter_str = f"description LIKE '%CUSTOMER_ID={customer_id}%' AND description LIKE '%SKU_ID={sku}%'"
-filter_str = f"name='{customer_id}_{sku}' and tag.customer_id='{customer_id}' and tag.sku='{sku}'"
-results = client.search_registered_models(filter_string=filter_str)
+for one_tuple in bests:
+    customer_id, store_id, sku, run_id = one_tuple
 
-if results:
-    model = results[0]
-    print(f"✅ Found model: {model.name}")
-    latest_version = model.latest_versions[0]
-    print(f"Latest version: {latest_version.version}, Run ID: {latest_version.run_id}")
-else:
-    print("❌ No matching model found in the registry.")
-    print("📦 No model found — registering new model.")
+    run = client.get_run(run_id=run_id)
+    if not run:
+        print(f"🚨 No run found for run_id: {run_id}")
+        continue
 
-    model_name = f"{customer_id}_{sku}"
+    new_metric_name = "mape"
+    new_metric_value = run.data.metrics.get(new_metric_name, "N/A")
 
-    # Register the current model (assumes artifact path is "model")
-    model_uri = f"runs:/{run_id}/model"
-    mlflow.register_model(model_uri=model_uri, name=model_name)
+    model_name = f"{customer_id}_{store_id}_{sku}"
+    filter_str = (
+        f"name='{model_name}' and "
+        f"tag.customer_id='{customer_id}' and "
+        f"tag.store_id='{store_id}' and "
+        f"tag.sku='{sku}'"
+    )
 
-    # Add tags to the registered model
-    client.set_registered_model_tag(name=model_name, key="customer_id", value=customer_id)
-    client.set_registered_model_tag(name=model_name, key="sku", value=sku)
+    results = client.search_registered_models(filter_string=filter_str)
 
-    # Output flags and metrics for GitHub Actions
-    print("IS_FIRST_MODEL=true")
-    print(f"NEW_METRIC={new_metric_value}")
-    print(f"OLD_METRIC=NA")
+    # 기본값
+    current_metric_value = "NA"
+    is_first_model = False
+    status = ""
 
-    # Exit early — no model to compare against
-    exit(0)
+    if not results:
+        # 등록
+        model_uri = f"runs:/{run_id}/model"
+        mlflow.register_model(model_uri=model_uri, name=model_name)
 
+        client.set_registered_model_tag(name=model_name, key="customer_id", value=customer_id)
+        client.set_registered_model_tag(name=model_name, key="store_id", value=store_id)
+        client.set_registered_model_tag(name=model_name, key="sku", value=sku)
 
+        is_first_model = True
+        status = "first_model_registered"
 
+    else:
+        model = results[0]
+        latest_version = model.latest_versions[0]
+        existing_run = client.get_run(run_id=latest_version.run_id)
 
-run = client.get_run(run_id=latest_version.run_id)
+        if not existing_run:
+            print(f"🚨 No run found for existing model version: {latest_version.run_id}")
+            continue
 
-if not run:
-    raise ValueError(f"🚨 No run found for run_id: {run_id}")
+        current_metric_value = existing_run.data.metrics.get(new_metric_name, "N/A")
 
-# ✅ Fetch the metric value (modify as needed)
-current_metric_name = "mape"  # Change this to the metric you need
-current_metric_value = run.data.metrics.get(current_metric_name, "N/A")
+        try:
+            if float(new_metric_value) < float(current_metric_value):
+                model_uri = f"runs:/{run_id}/model"
+                mlflow.register_model(model_uri=model_uri, name=model_name)
 
-print(f"✅ Fetched metric: {current_metric_name} = {current_metric_value} for run_id: {run_id}")
+                client.set_registered_model_tag(name=model_name, key="customer_id", value=customer_id)
+                client.set_registered_model_tag(name=model_name, key="store_id", value=store_id)
+                client.set_registered_model_tag(name=model_name, key="sku", value=sku)
 
+                status = "improved_and_registered"
+            else:
+                status = "not_registered_worse_or_equal"
+        except Exception as e:
+            status = f"comparison_failed: {e}"
 
-# Print in KEY=VALUE format for GitHub Actions to parse
-print(f"NEW_METRIC={new_metric_value}")
-print(f"OLD_METRIC={current_metric_value}")
+    # 결과 저장
+    results_list.append({
+        "customer_id": customer_id,
+        "store_id": store_id,
+        "sku": sku,
+        "new_metric": new_metric_value,
+        "old_metric": current_metric_value,
+        "is_first_model": is_first_model,
+        "status": status
+    })
+
+# ✅ DataFrame 생성
+results_df = pd.DataFrame(results_list)
+
+# ✅ 저장 (옵션)
+results_df.to_csv("model_comparison_result.csv", index=False)
+print("📄 model_comparison_result.csv saved!")
+
+# ✅ 출력 (옵션)
+print(results_df)

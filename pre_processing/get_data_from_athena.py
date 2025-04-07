@@ -81,14 +81,17 @@ def delete_s3_result(query_execution_id):
 
 
 
-def fetch_athena_query_as_dataframe(query_name: str) -> pd.DataFrame:
+# def fetch_athena_query_as_dataframe(query_name: str) -> pd.DataFrame:
 
+def fetch_athena_query_as_dataframe(query_name: str, **kwargs) -> pd.DataFrame:
+    print(BASE_DIR)
     query_dir = os.path.normpath(os.path.join(BASE_DIR, "queries"))
     query_path = os.path.join(query_dir, f"{query_name}.sql")
 
+    query_template = read_query_file(query_path)
+    query = query_template.format(**kwargs)  # <- 여기서 파라미터 치환
 
-    # query_path = f'pre_processing/queries/{query_name}.sql'
-    query = read_query_file(query_path)
+    
     execution_id = run_athena_query(query, S3_OUTPUT)
     status = get_query_status(execution_id)
 
@@ -100,4 +103,5 @@ def fetch_athena_query_as_dataframe(query_name: str) -> pd.DataFrame:
 
     print(f"✅ [{query_name}.sql] Athena 데이터 로딩 완료")
     return df
+
 

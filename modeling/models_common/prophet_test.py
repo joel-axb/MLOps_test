@@ -16,7 +16,7 @@ import dvc.api
 import pandas as pd
 
 import os
-from commons.common_functions import get_best_result
+# from commons.common_functions import get_best_result
 import tempfile, pickle
 
 
@@ -48,7 +48,9 @@ from commons.common_functions import CustomModelWrapper
     
 class Model:
 
-    def __init__(self, X_train, X_val, y_train, y_val, data, exp_name):
+    def __init__(self, X_train, X_val, y_train, y_val, data, 
+                exp_name, customer, store_id, sku, PREPROCESSING_PATH):
+        
         self.X_train = X_train
         self.X_val = X_val
         self.y_train = y_train
@@ -56,10 +58,20 @@ class Model:
         self.data = data
         self.dataset_dvc_path = '/Users/joel/Documents/github/MLOps_test/data_temp_storage/final_data.csv.dvc'
         self.experiment_name = exp_name
+        self.customer_id = customer
+        self.store_id = store_id
+        self.sku = sku
+        self.PREPROCESSING_PATH = PREPROCESSING_PATH
 
     # if __name__ == "__main__":
     def run(self):
         mlflow.set_experiment(self.experiment_name)
+
+
+        train_start_dt = self.X_train['forecast_dt'].min()
+        train_end_dt = self.X_train['forecast_dt'].max()
+        test_start_dt = self.X_val['forecast_dt'].min()
+        test_end_dt = self.X_val['forecast_dt'].max()
 
         # Use the fluent API to set the tracking uri and the active experiment
         # mlflow.set_tracking_uri("http://15.164.97.14:5000")
@@ -91,6 +103,9 @@ class Model:
 
         train_df = pd.concat([self.X_train, self.y_train], axis=1)
         test_df = pd.concat([self.X_val, self.y_val], axis=1)
+
+        train_df = train_df[['forecast_dt', 'sellout_raw']]
+        test_df = test_df[['forecast_dt', 'sellout_raw']]
 
         train_df.columns = ["ds", "y"]
         train_df["ds"] = pd.to_datetime(train_df["ds"])
@@ -140,6 +155,16 @@ class Model:
         mlflow.pyfunc.log_model("random_forest_model", python_model=CustomModelWrapper(model))
         mlflow.log_input(dataset, context="training")
         mlflow.log_param("dataset_md5", dataset_md5)
+        mlflow.log_param("sku", self.sku)
+
+        mlflow.log_param("train_start_dt", train_start_dt)
+        mlflow.log_param("train_end_dt", train_end_dt)
+        mlflow.log_param("test_start_dt", test_start_dt)
+        mlflow.log_param("test_end_dt", test_end_dt)
+
+        mlflow.log_param("customer_id", self.customer_id)
+        mlflow.log_param("store_id", self.store_id)
+
         # mlflow.log_artifact(model_path)
 
         if original_value is None:
@@ -148,4 +173,7 @@ class Model:
             os.environ["AWS_PROFILE"] = original_value
 
         mlflow.end_run()
-        print(f"✅ MAPE for Last 5 Days: {mape:.2f}%")
+        print(f"✅ MAPE: {mape:.2f}%")
+
+
+        return forecast['yhat'].values

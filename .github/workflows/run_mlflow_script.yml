@@ -133,12 +133,10 @@ jobs:
       #     fi
 
       - name: Read Slack message content
-        if: env.metric_check == 'failure'
         id: collect_slack_output
         run: |
-          message=$(cat modeling/commons/slack_message.txt)
           echo "message<<EOF" >> $GITHUB_OUTPUT
-          echo "$message" >> $GITHUB_OUTPUT
+          cat modeling/commons/slack_message.txt >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Slack notify

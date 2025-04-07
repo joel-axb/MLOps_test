@@ -58,7 +58,7 @@ for one_tuple in bests:
 
     try:
         if float(new_metric_value) < float(current_metric_value):
-            print(f"✅ New model is better for {model_name}! Registering new version.")
+            # print(f"✅ New model is better for {model_name}! Registering new version.")
 
             model_uri = f"runs:/{run_id}/model"
             mlflow.register_model(model_uri=model_uri, name=model_name)
@@ -67,7 +67,8 @@ for one_tuple in bests:
             client.set_registered_model_tag(name=model_name, key="store_id", value=store_id)
             client.set_registered_model_tag(name=model_name, key="sku", value=sku)
         else:
-            print(f"⚠️ New model is worse or equal for {model_name}. Not registering.")
+            None
+            # print(f"⚠️ New model is worse or equal for {model_name}. Not registering.")
     except Exception as e:
         print(f"⚠️ Metric comparison failed: {e}")
 

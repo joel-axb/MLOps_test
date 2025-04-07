@@ -1,0 +1,8 @@
+customer_id,store_id,sku,new_metric,old_metric,is_first_model,status
+beautyofjoseon,shopify-00,82BU001,24220.523542233208,24220.523542233208,False,not_registered_worse_or_equal
+beautyofjoseon,shopify-00,82BU006,50.0724033767458,50.0724033767458,False,not_registered_worse_or_equal
+brand501,shopify-01,MX00085,45.15927786923314,45.15927786923314,False,not_registered_worse_or_equal
+brand501,shopify-01,MXCB021,68.69629380653775,68.69629380653775,False,not_registered_worse_or_equal
+cosrx,shopify-us,SC40AS01,77.48303299336983,77.48303299336983,False,not_registered_worse_or_equal
+cosrx,shopify-us,SC40TR03,2.7427637499752935,2.524457243560393,False,not_registered_worse_or_equal
+cosrx,shopify-us,SC50AS01,12.011830885689992,12.011830885689992,False,not_registered_worse_or_equal

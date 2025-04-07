@@ -68,47 +68,10 @@ jobs:
           MLFLOW_TRACKING_USERNAME: ${{ env.MLFLOW_TRACKING_USERNAME }}
           MLFLOW_TRACKING_PASSWORD: ${{ env.MLFLOW_TRACKING_PASSWORD }}
         run: |
-          echo "Fetching metrics using Python..."
+          echo "📥 Running get_metrics.py..."
           cd modeling/commons
-          python get_metrics.py > metrics_output.txt
+          python get_metrics.py
 
-          echo "🚀 Full model comparison results:"
-          cat metrics_output.txt
-
-          # 초기화
-          echo "" > slack_message.txt
-          metric_check_success=true
-
-          while read -r line; do
-            IFS=',' read -r customer store sku new_metric_str old_metric_str is_first_str <<< "$line"
-
-            new_metric=$(echo "$new_metric_str" | cut -d '=' -f2)
-            old_metric=$(echo "$old_metric_str" | cut -d '=' -f2)
-            is_first_model=$(echo "$is_first_str" | cut -d '=' -f2)
-
-            echo "🔍 [$customer | $store | $sku] → NEW=$new_metric, OLD=$old_metric, FIRST=$is_first_model"
-
-            if [ "$is_first_model" = "True" ]; then
-              echo "$customer, $store, $sku ✅ First model. Skip comparison." >> slack_message.txt
-              continue
-            fi
-
-            cmp=$(echo "$new_metric < $old_metric" | bc -l)
-            if [ "$cmp" -eq 1 ]; then
-              echo "$customer, $store, $sku ✅ Improved (NEW=$new_metric < OLD=$old_metric)" >> slack_message.txt
-            else
-              echo "$customer, $store, $sku ⚠️ Degraded or Same (NEW=$new_metric >= OLD=$old_metric)" >> slack_message.txt
-              metric_check_success=false
-            fi
-          done < metrics_output.txt
-
-
-
-          if [ "$metric_check_success" = "false" ]; then
-            echo "metric_check=failure" >> $GITHUB_ENV
-          else
-            echo "metric_check=success" >> $GITHUB_ENV
-          fi
 
 
 
@@ -132,20 +95,21 @@ jobs:
       #       echo "New metric ${{ env.NEW_METRIC }} is worse than old one or same as before ${{ env.OLD_METRIC }}. Check model performance. :warning:"
       #     fi
 
-      - name: Read Slack message content
-        id: collect_slack_output
-        run: |
-          echo "message<<EOF" >> $GITHUB_OUTPUT
-          cat modeling/commons/slack_message.txt >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+      # - name: Read Slack message content
+      #   id: collect_slack_output
+      #   run: |
+      #     echo "message<<EOF" >> $GITHUB_OUTPUT
+      #     cat modeling/commons/slack_message.txt >> $GITHUB_OUTPUT
+      #     echo "EOF" >> $GITHUB_OUTPUT
 
-      - name: Slack notify
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
-          SLACK_COLOR: "#FF0000"
-          SLACK_TITLE: "⚠️ Model Performance Alert"
-          SLACK_MESSAGE: ${{ steps.collect_slack_output.outputs.message }}
+      - name: Upload CSV result to Slack
+        if: env.metric_check == 'failure'
+        run: |
+          curl -F file=@modeling/commons/model_comparison_result.csv \
+              -F "initial_comment=📊 Model comparison results (some models degraded)" \
+              -F channels=${{ secrets.SLACK_CHANNEL_ID }} \
+              -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
+              https://slack.com/api/files.upload
 
 
 

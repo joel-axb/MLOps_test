@@ -63,7 +63,6 @@ jobs:
 
 
       - name: Fetch and compare all metrics
-        if: env.skip_workflow != 'true'
         env:
           MLFLOW_TRACKING_USERNAME: ${{ env.MLFLOW_TRACKING_USERNAME }}
           MLFLOW_TRACKING_PASSWORD: ${{ env.MLFLOW_TRACKING_PASSWORD }}
@@ -102,14 +101,15 @@ jobs:
       #     cat modeling/commons/slack_message.txt >> $GITHUB_OUTPUT
       #     echo "EOF" >> $GITHUB_OUTPUT
 
-      - name: Upload CSV result to Slack
-        if: env.metric_check == 'failure'
-        run: |
-          curl -F file=@modeling/commons/model_comparison_result.csv \
-              -F "initial_comment=📊 Model comparison results (some models degraded)" \
-              -F channels=${{ secrets.SLACK_CHANNEL_ID }} \
-              -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
-              https://slack.com/api/files.upload
+      - name: Notify via Slack Webhook\
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK__CICD_DATA_NOTI_DEV }}
+          SLACK_COLOR: "#FF0000"
+          SLACK_TITLE: "⚠️ Model Comparison Result"
+          SLACK_MESSAGE: |
+            Some models degraded. Download the full result here:
+            👉 GitHub Actions Artifacts > model_comparison_result.csv
 
 
 

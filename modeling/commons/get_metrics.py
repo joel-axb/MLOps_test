@@ -11,23 +11,41 @@ args = parser.parse_args()
 exp_id = args.exp_id
 
 
-bests = get_best_result_for_each_sku(exp_id)
+best_runs, bests = get_best_result_for_each_sku(exp_id)
 
 if not bests:
     raise ValueError("🚨 No best runs found!")
 
+best_runs['test_end_dt'] = pd.to_datetime(best_runs['test_end_dt'])  # 문자열 → 날짜형
+latest_runs = best_runs.loc[best_runs.groupby(
+    ['customer_id', 'store_id', 'sku']
+)['test_end_dt'].idxmax()][['customer_id', 'store_id', 'sku', 'run_id']]
+
+grouped_df = best_runs.groupby(['customer_id', 'store_id', 'sku'])['mape'].mean().reset_index()
+grouped_df.rename(columns={'mape': 'avg_mape'}, inplace=True)
+
+merged_df = grouped_df.merge(latest_runs, on=['customer_id', 'store_id', 'sku'])
+
+
+bests = [
+(row.customer_id, row.store_id, row.sku, row.avg_mape, row.run_id)
+for row in merged_df.itertuples(index=False)]
+
 results_list = []
 
 for one_tuple in bests:
-    customer_id, store_id, sku, run_id = one_tuple
+    customer_id, store_id, sku, avg_mape, run_id = one_tuple
 
-    run = client.get_run(run_id=run_id)
-    if not run:
-        print(f"🚨 No run found for run_id: {run_id}")
-        continue
+
+    client.log_param(run_id=run_id, key="avg_mape", value=avg_mape)
+
+    # run = client.get_run(run_id=run_id)
+    # if not run:
+    #     print(f"🚨 No run found for run_id: {run_id}")
+    #     continue
 
     new_metric_name = "mape"
-    new_metric_value = run.data.metrics.get(new_metric_name, "N/A")
+    # new_metric_value = run.data.metrics.get(new_metric_name, "N/A")
 
     model_name = f"{customer_id}_{store_id}_{sku}"
     filter_str = (
@@ -68,7 +86,7 @@ for one_tuple in bests:
         current_metric_value = existing_run.data.metrics.get(new_metric_name, "N/A")
 
         try:
-            if float(new_metric_value) < float(current_metric_value):
+            if float(avg_mape) < float(current_metric_value):
                 model_uri = f"runs:/{run_id}/model"
                 mlflow.register_model(model_uri=model_uri, name=model_name)
 
@@ -87,7 +105,7 @@ for one_tuple in bests:
         "customer_id": customer_id,
         "store_id": store_id,
         "sku": sku,
-        "new_metric": new_metric_value,
+        "new_metric": avg_mape,
         "old_metric": current_metric_value,
         "is_first_model": is_first_model,
         "status": status

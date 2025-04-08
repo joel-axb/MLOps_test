@@ -65,13 +65,13 @@ def get_best_result_for_each_sku(exp_name):
     best_runs = (
         runs_df
         .sort_values("metrics.mape", ascending=True)
-        .groupby(["params.customer_id", "params.store_id", "params.sku"])  # SKU 기준으로 그룹화
+        .groupby(["params.customer_id", "params.store_id", "params.sku", "params.test_end_dt", "params.test_start_dt"])  # SKU 기준으로 그룹화
         .first()  # 각 SKU별로 가장 좋은 run 하나
         .reset_index()
     )
 
 
-    print(best_runs[["params.customer_id", "params.store_id", "params.sku", "params.model_type", "metrics.mape", "run_id"]])
+    print(best_runs[["params.test_start_dt", "params.test_end_dt", "params.customer_id", "params.store_id", "params.sku", "params.model_type", "metrics.mape", "run_id"]])
     
     best_runs.columns = [col.split(".")[-1] for col in best_runs.columns]
 
@@ -79,7 +79,7 @@ def get_best_result_for_each_sku(exp_name):
     (row.customer_id, row.store_id, row.sku, row.run_id)
     for row in best_runs.itertuples(index=False)]
 
-    return tuples
+    return best_runs, tuples
 
 
 

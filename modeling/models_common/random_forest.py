@@ -64,7 +64,7 @@ class Model:
         test_start_dt = self.X_val['forecast_dt'].min()
         test_end_dt = self.X_val['forecast_dt'].max()
 
-        model = RandomForestRegressor(max_depth=50)
+        model = RandomForestRegressor(max_depth=200)
         model.fit(X_train, self.y_train)
 
         y_pred = model.predict(X_val)

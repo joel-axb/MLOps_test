@@ -29,7 +29,7 @@ customer_list = []
 store_id_list = []
 sku_lists = []
 all_list = []
-
+validation_windows = []
 
 for one_config in total_config:
 
@@ -38,6 +38,7 @@ for one_config in total_config:
     store_id_list.append(one_config["store_id"])
     sku_lists.append(one_config["sku_list"]) #list
     all_list.append(one_config["all"])
+    validation_windows.append(one_config["validation_windows"])
 
 # get config info
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # 현재 commons/
@@ -48,7 +49,7 @@ MODELS_COMMON_DIR = os.path.normpath(os.path.join(BASE_DIR, "..", "models_common
 MODELS_COMMON_PATH = os.path.join(MODELS_COMMON_DIR, )
 file_names = [f[:-3] for f in os.listdir(MODELS_COMMON_PATH) if os.path.isfile(os.path.join(MODELS_COMMON_PATH, f))]
 
-for customer_id, store_id, sku_list, is_all in zip(customer_list, store_id_list, sku_lists, all_list):
+for customer_id, store_id, sku_list, is_all, validation_window in zip(customer_list, store_id_list, sku_lists, all_list, validation_windows):
 
     # load config.yaml
     with open(CONFIG_PATH, "r") as f:
@@ -90,44 +91,55 @@ for customer_id, store_id, sku_list, is_all in zip(customer_list, store_id_list,
         # y = data['sellout_raw']
         # X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
+
         # 날짜 기준으로 train/val 나누기
-        train_mask = data["forecast_dt"] < "2024-11-01"
-        val_mask = data["forecast_dt"] >= "2024-11-01"
+        for i in validation_window:
 
-        X = data.drop(columns=["sellout_raw", "sku", "customer_id", "store_id"])
-        y = data[['forecast_dt', 'sellout_raw']]
+            # train_mask = data["forecast_dt"] < "2024-11-01"
+            # val_mask = data["forecast_dt"] >= "2024-11-01"
 
-        X_train = X[train_mask]
-        X_val = X[val_mask]
-        y_train = y['sellout_raw'][train_mask]
-        y_val = y['sellout_raw'][val_mask]
+            train_mask = data["forecast_dt"] < i[0]
+            val_mask = (data["forecast_dt"] >= i[0]) & (data["forecast_dt"] < i[1])
 
+            X = data.drop(columns=["sellout_raw", "sku", "customer_id", "store_id"])
+            y = data[['forecast_dt', 'sellout_raw']]
 
-
-        for one_model_type in model_type:
-
-            # when the model is in models_common
-            if one_model_type in file_names : 
-                model_runner = build_model(one_model_type)
-                model = model_runner(X_train, X_val, y_train, y_val, data, 
-                                    exp_name, customer, store_id, sku, PREPROCESSING_PATH)
-                y_pred = model.run()
-
-                get_visualized_result(y[val_mask], y_pred)
+            X_train = X[train_mask]
+            X_val = X[val_mask]
+            y_train = y['sellout_raw'][train_mask]
+            y_val = y['sellout_raw'][val_mask]
 
 
-            # when the model is a customed one
-            else: 
-                module_name = f'{customer}_{store_id}_{sku}'
-                model_dir = os.path.normpath(os.path.join(BASE_DIR, "..", "models_customed"))
-                model_path = os.path.join(model_dir, f"{module_name}.py")
 
-                spec = importlib.util.spec_from_file_location(module_name, model_path)
-                module = importlib.util.module_from_spec(spec)
-                spec.loader.exec_module(module)
-                ModelClass = getattr(module, 'Model')
-                model_instance = ModelClass(X_train, X_val, y_train, y_val, data, 
+            for one_model_type in model_type:
+
+                try:
+                    # when the model is in models_common
+                    if one_model_type in file_names:
+                        model_runner = build_model(one_model_type)
+                        model = model_runner(X_train, X_val, y_train, y_val, data, 
                                             exp_name, customer, store_id, sku, PREPROCESSING_PATH)
-                y_pred = model_instance.run()
+                        
+                        y_pred = model.run()
 
-                get_visualized_result(y[val_mask], y_pred.values)
+                        # get_visualized_result(y[val_mask], y_pred)
+
+                    else:  # custom model
+                        module_name = f'{customer}_{store_id}_{sku}'
+                        model_dir = os.path.normpath(os.path.join(BASE_DIR, "..", "models_customed"))
+                        model_path = os.path.join(model_dir, f"{module_name}.py")
+
+                        spec = importlib.util.spec_from_file_location(module_name, model_path)
+                        module = importlib.util.module_from_spec(spec)
+                        spec.loader.exec_module(module)
+                        ModelClass = getattr(module, 'Model')
+                        model_instance = ModelClass(X_train, X_val, y_train, y_val, data, 
+                                                    exp_name, customer, store_id, sku, PREPROCESSING_PATH)
+                        y_pred = model_instance.run()
+
+                        # get_visualized_result(y[val_mask], y_pred.values)
+
+                except Exception as e:
+                    print(f"❌ [SKIPPED] Failed to run model: {one_model_type} | {customer}-{store_id}-{sku}")
+                    print(f"↪️  Reason: {e}")
+                    continue  # 다음 모델로 넘어감

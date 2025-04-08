@@ -1,0 +1,5 @@
+customer_id,store_id,sku,new_metric,old_metric,is_first_model,status
+beautyofjoseon,shopify-00,82BU001,14965.267079329911,11424.40306153846,False,not_registered_worse_or_equal
+cosrx,shopify-us,SC40AS01,541.460348466615,NA,True,first_model_registered
+cosrx,shopify-us,SC40TR03,363.2085784086837,2.524457243560393,False,not_registered_worse_or_equal
+cosrx,shopify-us,SC50AS01,76.41696209836358,12.011830885689992,False,not_registered_worse_or_equal

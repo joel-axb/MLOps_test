@@ -64,7 +64,7 @@ def get_configs():
             "customer_id": row.customer_id,
             "store_id": row.store_id,
             "sku": row.ssku,
-            "model_type": ["random_forest", "prophet_test", "linear_regression"]
+            "model_type": ["random_forest"]
         }
         config_list.append(sku_template)
 

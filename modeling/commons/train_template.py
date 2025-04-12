@@ -1,24 +1,27 @@
+# root 경로 설정용 setup
+import subprocess, sys, os
+# 현재 파일 위치 기준 절대 경로 추출
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))  # setup.py 기준
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-e", project_root])
+
+
+# 필요한 packages 로드
 import yaml
-from common_functions import read_final_dataset, get_visualized_result
-from model_factory import get_model_runner as build_model
-from sklearn.model_selection import train_test_split
-import importlib.util, os
-import pandas as pd
+import importlib.util
 import argparse
+
+
+from modeling.commons.common_functions import read_final_dataset, get_visualized_result
+from modeling.commons.model_factory import get_model_runner as build_model
 
 
 
 parser = argparse.ArgumentParser(description="Run experiment with a given name")
 parser.add_argument('--exp_name', type=str, required=True, help='Name of the experiment')
 args = parser.parse_args()
-
 exp_name = args.exp_name
 
 
-# parser = argparse.ArgumentParser()
-# parser.add_argument("--customer", required=True)
-# parser.add_argument("--sku", required=True)
-# args = parser.parse_args()
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # 현재 commons/
 TOTAL_CONFIG_PATH = os.path.join(BASE_DIR, "test_lists.yaml")
 # load config.yaml
@@ -110,9 +113,8 @@ for customer_id, store_id, sku_list, is_all, validation_window in zip(customer_l
             y_val = y['sellout_raw'][val_mask]
 
 
-
             for one_model_type in model_type:
-
+                print(one_model_type)
                 try:
                     # when the model is in models_common
                     if one_model_type in file_names:
@@ -121,7 +123,6 @@ for customer_id, store_id, sku_list, is_all, validation_window in zip(customer_l
                                             exp_name, customer, store_id, sku, PREPROCESSING_PATH)
                         
                         y_pred = model.run()
-
                         # get_visualized_result(y[val_mask], y_pred)
 
                     else:  # custom model

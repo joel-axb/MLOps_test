@@ -1,28 +1,18 @@
-import boto3.session
-import mlflow
-import mlflow.artifacts
-import mlflow.sklearn
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
+# root 경로 설정용 setup
+import subprocess, sys, os
+# 현재 파일 위치 기준 절대 경로 추출
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))  # setup.py 기준
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-e", project_root])
 
+import mlflow
 import sys
 import yaml
 
 from prophet import Prophet
 import numpy as np
-
-import dvc.api
 import pandas as pd
 
-import os
-# from commons.common_functions import get_best_result
-import tempfile, pickle
-
-
-import sys, os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
-from commons.common_functions import CustomModelWrapper
+from modeling.commons.common_functions import CustomModelWrapper
 
 
 # def create_experiment():

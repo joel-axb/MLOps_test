@@ -1,6 +1,13 @@
+# root 경로 설정용 setup
+import subprocess, sys, os
+# 현재 파일 위치 기준 절대 경로 추출
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))  # setup.py 기준
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-e", project_root])
+
+
 import mlflow
 import pandas as pd
-from common_functions import get_best_result_for_each_sku
+from modeling.commons.common_functions import get_best_result_for_each_sku
 import argparse
 
 client = mlflow.tracking.MlflowClient()

@@ -1,8 +1,17 @@
+# root 경로 설정용 setup
+import subprocess, sys, os
+# 현재 파일 위치 기준 절대 경로 추출
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))  # setup.py 기준
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-e", project_root])
+
+
 import pandas as pd
-from get_data_from_athena import fetch_athena_query_as_dataframe
 import matplotlib.pyplot as plt
-import os
 import yaml
+
+from pre_processing_1.get_data_from_athena import fetch_athena_query_as_dataframe
+
+
 
 def prepare_dataset(save_path):
 

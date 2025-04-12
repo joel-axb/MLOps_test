@@ -1,17 +1,18 @@
-# models_common/linear_regression.py
+# root 경로 설정용 setup
+import subprocess, sys, os
+# 현재 파일 위치 기준 절대 경로 추출
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))  # setup.py 기준
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-e", project_root])
+
 
 import mlflow
-import pickle
-import tempfile
 import yaml
 import os
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import mlflow.pyfunc
 
-import sys, os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
-from commons.common_functions import CustomModelWrapper
+from modeling.commons.common_functions import CustomModelWrapper
 
 
 class Model:

@@ -1,9 +1,10 @@
 import mlflow
-import mlflow.artifacts
 import pandas as pd
 import dvc.api
 import matplotlib.pyplot as plt
 import os
+
+
 
 class CustomModelWrapper(mlflow.pyfunc.PythonModel):
     def __init__(self, model):
@@ -13,27 +14,6 @@ class CustomModelWrapper(mlflow.pyfunc.PythonModel):
         
         return self.model.predict(model_input)
 
-
-# def get_best_artifacts():
-
-#     run_id = "dbaa981974b1475bb5ca71595353f735"
-#     artifact_uri = f"/Users/joel/Documents/github/MLOps_test/mlruns/0/{run_id}/artifacts/linear_regression.py"
-#     mlflow.artifacts.download_artifacts(artifact_uri, dst_path="./modeling")
-
-
-# def get_best_result():
-#     # Get experiment details
-
-#     run_id = "dbaa981974b1475bb5ca71595353f735"
-#     run = mlflow.get_run(run_id)
-    
-#     if run is None:
-#         print(f"Run '{run_id}' not found.")
-#         return None
-
-#     metrics = run.data.metrics
-#     print(f"Metrics for run {run_id}: {metrics}")
-#     return metrics
     
 
 def read_final_dataset(config):
@@ -65,13 +45,13 @@ def get_best_result_for_each_sku(exp_name):
     best_runs = (
         runs_df
         .sort_values("metrics.mape", ascending=True)
-        .groupby(["params.customer_id", "params.store_id", "params.sku"])  # SKU 기준으로 그룹화
+        .groupby(["params.customer_id", "params.store_id", "params.sku", "params.test_end_dt", "params.test_start_dt"])  # SKU 기준으로 그룹화
         .first()  # 각 SKU별로 가장 좋은 run 하나
         .reset_index()
     )
 
 
-    print(best_runs[["params.customer_id", "params.store_id", "params.sku", "params.model_type", "metrics.mape", "run_id"]])
+    print(best_runs[["params.test_start_dt", "params.test_end_dt", "params.customer_id", "params.store_id", "params.sku", "params.model_type", "metrics.mape", "run_id"]])
     
     best_runs.columns = [col.split(".")[-1] for col in best_runs.columns]
 
@@ -79,7 +59,7 @@ def get_best_result_for_each_sku(exp_name):
     (row.customer_id, row.store_id, row.sku, row.run_id)
     for row in best_runs.itertuples(index=False)]
 
-    return tuples
+    return best_runs, tuples
 
 
 

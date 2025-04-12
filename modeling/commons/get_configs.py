@@ -1,14 +1,20 @@
+# root 경로 설정용 setup
+import subprocess, sys, os
+# 현재 파일 위치 기준 절대 경로 추출
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))  # setup.py 기준
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-e", project_root])
+
+
 import argparse
 import sys
 import os
 import json
 import yaml
 
-# 상위 디렉토리 기준 상대경로
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-
 from modeling.commons.common_functions import load_query_template
-from pre_processing.get_data_from_athena import fetch_athena_query_as_dataframe
+from pre_processing_1.get_data_from_athena import fetch_athena_query_as_dataframe
+
+
 
 def save_dict_list_as_python_file(dict_list, output_path):
     for d in dict_list:
@@ -64,7 +70,7 @@ def get_configs():
             "customer_id": row.customer_id,
             "store_id": row.store_id,
             "sku": row.ssku,
-            "model_type": ["random_forest", "prophet_test", "linear_regression"]
+            "model_type": ["random_forest"]
         }
         config_list.append(sku_template)
 

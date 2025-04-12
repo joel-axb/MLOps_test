@@ -1,0 +1,2 @@
+customer_id,store_id,sku,new_metric,old_metric,is_first_model,status
+cosrx,shopify-us,SC40AS01,494.83285824175823,NA,True,first_model_registered

@@ -1,2608 +1,10 @@
 [
   {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "01BU005",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS031",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS006",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS019",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "01BU011",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "01BU002",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP026-BG",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP015-BG",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "01BU010",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS032",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP003",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS020",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS026",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP001",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMSM03-SD",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMC01-OC",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BU003",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BB003",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMS01-CR",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMS05-GEL",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMS01-SRVR",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "8809971480871",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMC02-OCRR",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMS01-SriR",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP042",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS022",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BL004",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS001",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BB002",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP012",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BL009",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP029",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP032",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP005",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BL006",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "50278424969432",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "50278406848728",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "113020072",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "113020245",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC40BM01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SP20FF02_V2",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SE20FF05",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "WGRPK2257",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "WGRPK1788",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC40TR06",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC50BM03",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "44992137134296",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC30OL02_V2",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "AP10OL01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC40TR36",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SP20AC01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "CL20LH09",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC50AC03",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "AP10MN04",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC10HM03",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC40TR02",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC50FF01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "EC10AS01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "CL10PF07",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "44978042339544",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "WGRPK1257",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC50AS12",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "PA10OS02_V4",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "WGRPK1522",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "45360721002712",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "WGRPK2256",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "AP10MN01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "BT20OL01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC50RH02",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC10HM02",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "PA10OS01_V4",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "CL10LH02",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "CL20AC01_V2",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC50HM01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "CL99LH01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SP10OL05",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC40OL01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SP20AS01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB055",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB164",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB142",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB059",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00067",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB020",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB220",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00010",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB130",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB202",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB026",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB043",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB166",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB064",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0097",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00020",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00023",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00025",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0079",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0111",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0113",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00039",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0112",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB086",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00086",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB089",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB081",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB087",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB082",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB104",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB088",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB085",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB093",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00071",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB009",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB010",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB008",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00062",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB006",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB006",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00063",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00078",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00108",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00069",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00079",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB001",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB010",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB016",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB011",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB033",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00059",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB009",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00090",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00077",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB002",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB015",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB128",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB136",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "01BU003",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP026",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS030",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BU006",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS010",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS033",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS004",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP008",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BC005",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82010815",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMC02-CB",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "43121947836581",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82010805",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMS01-GL4SET",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMS08-S",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "8809975190288",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82010821",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMS01-TR",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMSM03-GLASDUO",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "43893871771813",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMS01-SCR",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "TEST-PRODUCT-PREORDER",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP006",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BL001",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BM002",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BM001",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BU004",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BB004",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP022",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP028",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP027",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BB001",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP040",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BL008",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS002",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BL007",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BC002",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB144",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00068",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB246",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB132",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB248",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB129",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB021",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB133",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB187",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB208",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB211",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB188",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB057",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00097",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB249",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00081",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB058",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00100",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB207",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB169",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB101",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "PS00020",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "PS00015",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "PS00019",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB045",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "49265619566903",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00084",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "SY00007",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00082",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00042",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0103",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0105",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0104",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB012",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB017",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB019",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0080",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00066",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB031",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB024",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB107",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB039",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB096",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00031",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00040",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00058",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB013",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00105",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB016",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB001",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00049",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB002",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00091",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00051",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0048",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00055",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB011",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00088",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB003",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB005",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00064",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB007",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB062",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
     "customer_id": "cosrx",
     "store_id": "shopify-us",
     "sku": "113020929",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2611,9 +13,7 @@
     "store_id": "shopify-us",
     "sku": "50278416875736",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2622,9 +22,7 @@
     "store_id": "shopify-us",
     "sku": "SC60SS08",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2633,9 +31,7 @@
     "store_id": "shopify-us",
     "sku": "SA10PF05",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2644,9 +40,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1895",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2655,9 +49,7 @@
     "store_id": "shopify-us",
     "sku": "BT10RX04",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2666,9 +58,7 @@
     "store_id": "shopify-us",
     "sku": "SP10PL01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2677,9 +67,7 @@
     "store_id": "shopify-us",
     "sku": "SP10OL07",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2688,9 +76,7 @@
     "store_id": "shopify-us",
     "sku": "SE20OL11",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2699,9 +85,7 @@
     "store_id": "shopify-us",
     "sku": "CL20LH04",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2710,9 +94,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1873",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2721,9 +103,7 @@
     "store_id": "shopify-us",
     "sku": "SA10LH04",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2732,9 +112,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1874",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2743,9 +121,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1875",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2754,9 +130,7 @@
     "store_id": "shopify-us",
     "sku": "SC50PF01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2765,9 +139,7 @@
     "store_id": "shopify-us",
     "sku": "SC40TR14",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2776,9 +148,7 @@
     "store_id": "shopify-us",
     "sku": "44992111313112",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2787,9 +157,7 @@
     "store_id": "shopify-us",
     "sku": "CL10PF02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2798,9 +166,7 @@
     "store_id": "shopify-us",
     "sku": "44992129335512",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2809,9 +175,7 @@
     "store_id": "shopify-us",
     "sku": "49574712738008",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2820,9 +184,7 @@
     "store_id": "shopify-us",
     "sku": "CL20AS01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2831,9 +193,7 @@
     "store_id": "shopify-us",
     "sku": "45020941353176",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2842,9 +202,7 @@
     "store_id": "shopify-us",
     "sku": "SC40OL10",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2853,9 +211,7 @@
     "store_id": "shopify-us",
     "sku": "SC10RH02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2864,9 +220,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1258",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2875,9 +229,7 @@
     "store_id": "shopify-us",
     "sku": "SC40TR03",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2886,9 +238,7 @@
     "store_id": "shopify-us",
     "sku": "SP99FF01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2897,9 +247,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK976",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2908,9 +256,7 @@
     "store_id": "shopify-us",
     "sku": "AP10MN03",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2919,9 +265,7 @@
     "store_id": "shopify-us",
     "sku": "SC40TR19_V2",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2930,9 +274,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1521",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2941,9 +283,7 @@
     "store_id": "shopify-us",
     "sku": "SC40TR09",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2952,9 +292,7 @@
     "store_id": "shopify-us",
     "sku": "SC50PF05",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2963,9 +301,7 @@
     "store_id": "shopify-us",
     "sku": "PC10AC01_V2",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2974,9 +310,7 @@
     "store_id": "shopify-us",
     "sku": "SC40RH01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2985,9 +319,7 @@
     "store_id": "shopify-us",
     "sku": "SC10FF02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -2996,9 +328,7 @@
     "store_id": "shopify-us",
     "sku": "SC40HM02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3007,9 +337,7 @@
     "store_id": "shopify-us",
     "sku": "CL20PF02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3018,9 +346,7 @@
     "store_id": "shopify-us",
     "sku": "SC50TR06",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3029,9 +355,7 @@
     "store_id": "shopify-us",
     "sku": "SC40AS01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3040,9 +364,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1259",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3051,9 +373,7 @@
     "store_id": "shopify-us",
     "sku": "PA10PF05",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3062,9 +382,7 @@
     "store_id": "shopify-us",
     "sku": "SC40PF01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3073,9 +391,7 @@
     "store_id": "shopify-us",
     "sku": "SC99PF01_V2",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3084,9 +400,7 @@
     "store_id": "shopify-us",
     "sku": "SC50BM06",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3095,9 +409,7 @@
     "store_id": "shopify-us",
     "sku": "SP20AS03",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3106,9 +418,7 @@
     "store_id": "shopify-us",
     "sku": "SC50OL02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3117,9 +427,7 @@
     "store_id": "shopify-us",
     "sku": "SC40OL13",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3128,9 +436,7 @@
     "store_id": "shopify-us",
     "sku": "SC10OL02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3139,9 +445,7 @@
     "store_id": "shopify-us",
     "sku": "AP10AC01_V2",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3150,9 +454,7 @@
     "store_id": "shopify-us",
     "sku": "SC10PF01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -3161,2770 +463,340 @@
     "store_id": "shopify-us",
     "sku": "SC40AC03_V2",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "01BU004",
+    "sku": "01BU003",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "01BU013",
+    "sku": "82BP026",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BS008",
+    "sku": "82BS030",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "51833751142772",
+    "sku": "82BU006",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "01BU006",
+    "sku": "82BS010",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BU007",
+    "sku": "82BS033",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BP015",
+    "sku": "82BS004",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "51833751110004",
+    "sku": "82BP008",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BP002",
+    "sku": "82BC005",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BS021",
+    "sku": "82010815",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BU001",
+    "sku": "JSMC02-CB",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82010401",
+    "sku": "43121947836581",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "01BU001",
+    "sku": "82010805",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BP016",
+    "sku": "JSMS01-GL4SET",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "43084850888869",
+    "sku": "JSMS08-S",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "JSMP05-PK",
+    "sku": "8809975190288",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BP017",
+    "sku": "82010821",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82010309",
+    "sku": "JSMS01-TR",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "JSMC02-PGR",
+    "sku": "JSMSM03-GLASDUO",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "JSMC02-FG",
+    "sku": "43893871771813",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BP014",
+    "sku": "JSMS01-SCR",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BP023",
+    "sku": "TEST-PRODUCT-PREORDER",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BL002",
+    "sku": "82BP006",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BP025",
+    "sku": "82BL001",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BS003",
+    "sku": "82BM002",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BB005",
+    "sku": "82BM001",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BP024",
+    "sku": "82BU004",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "51727087567220",
+    "sku": "82BB004",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "51727087337844",
+    "sku": "82BP022",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "113020927",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "PA10PF03",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "BT10RX02_V2",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "WGRPK1893",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SP10FF01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC10RH03",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC40TR31",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC10FF03",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "WGRPK1901",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC40TR20",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "WGRPK1805",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "WGRPK1896",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SE20HM04",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SA20AS01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC50RX01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "BT10RX01_V2",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "ET01OL69",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "BT10RX03",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SE20RH01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC40TR04",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "WGRPK1114",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC40OL08",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC40AC02_V2",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC50AS08",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC40AS09",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "CL20LH11",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC50BM04",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SP99RH01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC10HM01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC60SS01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "44978039881944",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "44978039914712",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SE20AS01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "EC99TR01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC50AS09",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "44992153911512",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "CL20AC04",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC40TR34",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC50PF06",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SP99FF02",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "44992152338648",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "CL20PF01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SC60OL03",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "SE20FF04",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "cosrx",
-    "store_id": "shopify-us",
-    "sku": "BC99BM01",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB177",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB178",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB141",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB134",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB135",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB247",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00109",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB245",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB126",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00029",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00101",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00110",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00102",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00005",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB175",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB056",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB137",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB204",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB206",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB205",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB119",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB168",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0098",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB040",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0084",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00008",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "SA00016",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00009",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0086",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00022",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB048",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0085",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB041",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB044",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00024",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB004",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB015",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB051",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB004",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0106",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB007",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0066",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0108",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB122",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00087",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB042",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB022",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB108",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB091",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB106",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB105",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB103",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB095",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB084",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00061",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00044",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00057",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB038",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00094",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00047",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "PS00074",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00038",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "PS00070",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB003",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB018",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00053",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00050",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0047",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "PS00048",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB008",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB005",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB098",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB097",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB139",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB138",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BU002",
+    "sku": "82BP028",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "RS-DTK-2M",
+    "sku": "82BP027",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "01BU007",
+    "sku": "82BB001",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "01BU008",
+    "sku": "82BP040",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "01BU009",
+    "sku": "82BL008",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BP047",
+    "sku": "82BS002",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "01BU012",
+    "sku": "82BL007",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
   {
     "customer_id": "beautyofjoseon",
     "store_id": "shopify-00",
-    "sku": "82BP003-BG",
+    "sku": "82BC002",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS012",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS024",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BS016",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BC001",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMS01-I",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMSM03-SR",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82010501",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP018",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMS01-Sg",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "8809875902578",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "JSMS01-TG",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BM003",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP011",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BC004",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BC003",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BP037",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BL003",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "beautyofjoseon",
-    "store_id": "shopify-00",
-    "sku": "82BL005",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB140",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB053",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB244",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB100",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB180",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00052",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB165",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00106",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00107",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00080",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB054",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB052",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB243",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB176",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "GLMX114",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00085",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB121",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB125",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB203",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB167",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB027",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB159",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB025",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB050",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00026",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00021",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "SA00018",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "PS0000123123",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0083",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00007",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "49373271261495",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0114",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0088",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0065",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0107",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0091",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0116",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB123",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB094",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB109",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB092",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB090",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB083",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00041",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00089",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0096",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00045",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB013",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00056",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB124",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00065",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00093",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00030",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00046",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00083",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00016",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00070",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "PS00050",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00036",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB023",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "PS00049",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BB0095",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB014",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "PS00072",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "PS00068",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB012",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MX00037",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-00",
-    "sku": "BBCB014",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB032",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB110",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB099",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB111",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB102",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB143",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB131",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
-    ],
-    "dat_preprocessing": "pre_processing.py"
-  },
-  {
-    "customer_id": "brand501",
-    "store_id": "shopify-01",
-    "sku": "MXCB127",
-    "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -5933,9 +805,7 @@
     "store_id": "shopify-us",
     "sku": "113027054",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -5944,9 +814,7 @@
     "store_id": "shopify-us",
     "sku": "SP20AS02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -5955,9 +823,7 @@
     "store_id": "shopify-us",
     "sku": "SA10LH11",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -5966,9 +832,7 @@
     "store_id": "shopify-us",
     "sku": "AP10OL02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -5977,9 +841,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK2152",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -5988,9 +850,7 @@
     "store_id": "shopify-us",
     "sku": "SA20OL11",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -5999,9 +859,7 @@
     "store_id": "shopify-us",
     "sku": "CL20AS02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6010,9 +868,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1897",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6021,9 +877,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1997",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6032,9 +886,7 @@
     "store_id": "shopify-us",
     "sku": "PA10PL01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6043,9 +895,7 @@
     "store_id": "shopify-us",
     "sku": "42403304997080",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6054,9 +904,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK2255",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6065,9 +913,7 @@
     "store_id": "shopify-us",
     "sku": "SC20BM01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6076,9 +922,7 @@
     "store_id": "shopify-us",
     "sku": "44456858910936",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6087,9 +931,7 @@
     "store_id": "shopify-us",
     "sku": "45360665034968",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6098,9 +940,7 @@
     "store_id": "shopify-us",
     "sku": "SC10OL03",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6109,9 +949,7 @@
     "store_id": "shopify-us",
     "sku": "SC50AS01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6120,9 +958,7 @@
     "store_id": "shopify-us",
     "sku": "PA10OS03_V4",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6131,9 +967,7 @@
     "store_id": "shopify-us",
     "sku": "SP10AS02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6142,9 +976,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK2141",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6153,9 +985,7 @@
     "store_id": "shopify-us",
     "sku": "SP99BM01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6164,9 +994,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1385",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6175,9 +1003,7 @@
     "store_id": "shopify-us",
     "sku": "SC10RH01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6186,9 +1012,7 @@
     "store_id": "shopify-us",
     "sku": "44992145162456",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6197,9 +1021,7 @@
     "store_id": "shopify-us",
     "sku": "SP20BM01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6208,9 +1030,7 @@
     "store_id": "shopify-us",
     "sku": "SC50TR07",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6219,9 +1039,7 @@
     "store_id": "shopify-us",
     "sku": "SP20HM03",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6230,9 +1048,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1133",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6241,9 +1057,7 @@
     "store_id": "shopify-us",
     "sku": "SC10FF01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6252,9 +1066,7 @@
     "store_id": "shopify-us",
     "sku": "44992128614616",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6263,9 +1075,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1377",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6274,9 +1084,7 @@
     "store_id": "shopify-us",
     "sku": "SC40HM01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6285,9 +1093,7 @@
     "store_id": "shopify-us",
     "sku": "SC60AE02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6296,9 +1102,7 @@
     "store_id": "shopify-us",
     "sku": "SC50HM02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6307,9 +1111,7 @@
     "store_id": "shopify-us",
     "sku": "CL10HM01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6318,9 +1120,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1793",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6329,9 +1129,7 @@
     "store_id": "shopify-us",
     "sku": "AP10MN02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6340,9 +1138,7 @@
     "store_id": "shopify-us",
     "sku": "SC40FF01_V2",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6351,9 +1147,7 @@
     "store_id": "shopify-us",
     "sku": "AP10MN05",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6362,9 +1156,7 @@
     "store_id": "shopify-us",
     "sku": "WGRPK1256",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6373,9 +1165,7 @@
     "store_id": "shopify-us",
     "sku": "PA10FF01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6384,9 +1174,7 @@
     "store_id": "shopify-us",
     "sku": "SC40AC01_V2",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6395,9 +1183,7 @@
     "store_id": "shopify-us",
     "sku": "SP20PF01",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6406,9 +1192,7 @@
     "store_id": "shopify-us",
     "sku": "PC99AC02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6417,9 +1201,7 @@
     "store_id": "shopify-us",
     "sku": "SC50OL06",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6428,9 +1210,7 @@
     "store_id": "shopify-us",
     "sku": "SE20PF02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6439,9 +1219,7 @@
     "store_id": "shopify-us",
     "sku": "SC40OL05",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6450,9 +1228,7 @@
     "store_id": "shopify-us",
     "sku": "BC99BM02",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   },
@@ -6461,9 +1237,1609 @@
     "store_id": "shopify-us",
     "sku": "113020184",
     "model_type": [
-      "random_forest",
-      "prophet_test",
-      "linear_regression"
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BU002",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "RS-DTK-2M",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "01BU007",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "01BU008",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "01BU009",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP047",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "01BU012",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP003-BG",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS012",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS024",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS016",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BC001",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMS01-I",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMSM03-SR",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82010501",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP018",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMS01-Sg",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "8809875902578",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMS01-TG",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BM003",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP011",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BC004",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BC003",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP037",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BL003",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BL005",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "113020927",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "PA10PF03",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "BT10RX02_V2",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "WGRPK1893",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SP10FF01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC10RH03",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC40TR31",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC10FF03",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "WGRPK1901",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC40TR20",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "WGRPK1805",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "WGRPK1896",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SE20HM04",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SA20AS01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC50RX01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "BT10RX01_V2",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "ET01OL69",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "BT10RX03",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SE20RH01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC40TR04",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "WGRPK1114",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC40OL08",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC40AC02_V2",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC50AS08",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC40AS09",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "CL20LH11",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC50BM04",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SP99RH01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC10HM01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC60SS01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "44978039881944",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "44978039914712",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SE20AS01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "EC99TR01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC50AS09",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "44992153911512",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "CL20AC04",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC40TR34",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC50PF06",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SP99FF02",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "44992152338648",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "CL20PF01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC60OL03",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SE20FF04",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "BC99BM01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "01BU004",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "01BU013",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS008",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "51833751142772",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "01BU006",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BU007",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP015",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "51833751110004",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP002",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS021",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BU001",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82010401",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "01BU001",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP016",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "43084850888869",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMP05-PK",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP017",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82010309",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMC02-PGR",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMC02-FG",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP014",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP023",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BL002",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP025",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS003",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BB005",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP024",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "51727087567220",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "51727087337844",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "50278424969432",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "50278406848728",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "113020072",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "113020245",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC40BM01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SP20FF02_V2",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SE20FF05",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "WGRPK2257",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "WGRPK1788",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC40TR06",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC50BM03",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "44992137134296",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC30OL02_V2",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "AP10OL01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC40TR36",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SP20AC01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "CL20LH09",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC50AC03",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "AP10MN04",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC10HM03",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC40TR02",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC50FF01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "EC10AS01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "CL10PF07",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "44978042339544",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "WGRPK1257",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC50AS12",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "PA10OS02_V4",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "WGRPK1522",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "45360721002712",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "WGRPK2256",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "AP10MN01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "BT20OL01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC50RH02",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC10HM02",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "PA10OS01_V4",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "CL10LH02",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "CL20AC01_V2",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC50HM01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "CL99LH01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SP10OL05",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SC40OL01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "cosrx",
+    "store_id": "shopify-us",
+    "sku": "SP20AS01",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "01BU005",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS031",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS006",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS019",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "01BU011",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "01BU002",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP026-BG",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP015-BG",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "01BU010",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS032",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP003",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS020",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS026",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP001",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMSM03-SD",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMC01-OC",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BU003",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BB003",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMS01-CR",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMS05-GEL",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMS01-SRVR",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "8809971480871",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMC02-OCRR",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "JSMS01-SriR",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP042",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS022",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BL004",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BS001",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BB002",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP012",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BL009",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP029",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP032",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BP005",
+    "model_type": [
+      "random_forest"
+    ],
+    "dat_preprocessing": "pre_processing.py"
+  },
+  {
+    "customer_id": "beautyofjoseon",
+    "store_id": "shopify-00",
+    "sku": "82BL006",
+    "model_type": [
+      "random_forest"
     ],
     "dat_preprocessing": "pre_processing.py"
   }

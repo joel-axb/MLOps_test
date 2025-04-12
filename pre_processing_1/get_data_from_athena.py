@@ -81,6 +81,16 @@ def delete_s3_result(query_execution_id):
 
 
 
+def format_list_for_sql(values):
+    if isinstance(values, (list, tuple)):
+        return "(" + ", ".join(f"'{v}'" for v in values) + ")"
+    elif isinstance(values, str):
+        return f"('{values}')"
+    else:
+        raise ValueError("IN clause values must be str, list, or tuple.")
+
+
+
 # def fetch_athena_query_as_dataframe(query_name: str) -> pd.DataFrame:
 
 def fetch_athena_query_as_dataframe(query_name: str, **kwargs) -> pd.DataFrame:
@@ -89,7 +99,12 @@ def fetch_athena_query_as_dataframe(query_name: str, **kwargs) -> pd.DataFrame:
     query_path = os.path.join(query_dir, f"{query_name}.sql")
 
     query_template = read_query_file(query_path)
-    query = query_template.format(**kwargs)  # <- 여기서 파라미터 치환
+    formatted_kwargs = {
+        key: format_list_for_sql(val) if "in" in query_template.lower() and isinstance(val, (list, tuple, str)) else val
+        for key, val in kwargs.items()
+    }
+
+    query = query_template.format(**formatted_kwargs)
 
     
     execution_id = run_athena_query(query, S3_OUTPUT)
